@@ -1,0 +1,6 @@
+[book]
+authors = ["emanuele-em"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Competitive Programmer's Handbook - Rust Edition"
