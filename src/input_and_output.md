@@ -16,7 +16,7 @@ fn solve(input: &mut Input, _test_case: usize) {
 ```
 The combination of these 2 functions always works, assuming that there is at least one space or newline between each element in the input.
 For example, the above code can read the following inputs:
-```shell
+```ignore
 4
 1 4 3 2
 ```
@@ -29,10 +29,10 @@ fn solve(input: &mut Input, _test_case: usize) {
 }
 ```
 can read both of the following inputs:
-```
+```ignore
 123 456 monkey
 ```
-```
+```ignore
 123 456
 monkey
 ```

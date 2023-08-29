@@ -6,4 +6,3 @@ src = "src"
 title = "Competitive Programmer's Handbook - Rust Edition"
 
 [preprocessor.katex]
-after = ["links"]

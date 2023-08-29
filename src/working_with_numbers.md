@@ -28,13 +28,13 @@ Thus, we can take the remainder after every operation and the numbers will never
 For example, the following code calculates n!, the factorial of n, modulo m:
 
 ```rust
-#let n = 5;
-#let m = 9;
+# let n = 5;
+# let m = 9;
 let mut x = 1;
 for i in (2..=n){
     x = (x*i)%m;
 }
-#print!("if n = {n} and m = {m} the printed value is ");
+# print!("if n = {n} and m = {m} the printed value is ");
 println!("{}", x%m);
 ```
 Usually we want the remainder to always be between $0...m-1$. However, in Rust and other languages, the remainder of a negative number is either zero or negative. An easy way to make sure there are no negative remainders is to first calculate the remainder as usual and then add $m$ if the result is negative:

@@ -34,7 +34,7 @@ fn main() {
 //END MAIN
 ```
 The code can be compiled using the following command
-```
+```ignore
 cargo build --bin name_of_the_problem_bin
 ```
 The solution will be compiled in the `main.rs` file of the main package (not in the `main.rs` file of the compiled bin where `solve()` function is located)

@@ -60,6 +60,6 @@ can be shortened as follows:
 #            println!("{}", i);
 #        }
 #    };
-#}
+# }
 rep!(1, 5);
 ```
