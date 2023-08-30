@@ -5,4 +5,9 @@ multilingual = false
 src = "src"
 title = "Competitive Programmer's Handbook - Rust Edition"
 
+[output.html]
+additional-css = ["assets/css/custom.css"]
+
 [preprocessor.katex]
+[preprocessor.graphviz]
+command = "mdbook-graphviz"

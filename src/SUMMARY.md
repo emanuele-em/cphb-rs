@@ -15,10 +15,10 @@
         - [Complexity classes](complexity_classes.md)
         - [Estimating efficiency](estimating_efficiency.md)
         - [Maximum subarray sum](maximum_subarray_sum.md)
-    - [Sorting](sorting_theory.md)
+    - [Sorting](sorting.md)
         - [Sorting theory](sorting_theory.md)
-<!--         - [Sorting in Rust](README.md) -->
-<!--         - [Binary search](README.md) -->
+        - [Sorting in Rust](sorting_in_rust.md)
+        - [Binary search](binary_search.md)
 <!--     - [Data structures](README.md) -->
 <!--         - [Dynamic arrays](README.md) -->
 <!--         - [Set structures](README.md) -->
