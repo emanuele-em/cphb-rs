@@ -26,7 +26,7 @@
         - [Map structures](map_structures.md)
         - [Iterators and ranges](iterators_and_ranges.md)
         - [Other structures](other_structures.md)
-<!--         - [Comparison to sorting](README.md) -->
+        - [Comparison to sorting](comparison_to_sorting.md)
 <!--     - [Complete search](README.md) -->
 <!--         - [Generating subsets](README.md) -->
 <!--         - [Generating permutations](README.md) -->
