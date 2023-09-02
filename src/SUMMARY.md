@@ -19,12 +19,13 @@
         - [Sorting theory](sorting_theory.md)
         - [Sorting in Rust](sorting_in_rust.md)
         - [Binary search](binary_search.md)
-<!--     - [Data structures](README.md) -->
-<!--         - [Dynamic arrays](README.md) -->
-<!--         - [Set structures](README.md) -->
-<!--         - [Map structures](README.md) -->
-<!--         - [Iterators and ranges](README.md) -->
-<!--         - [Other structures](README.md) -->
+    - [Data structures](data_structures.md)
+        - [Vectors](vectors.md)
+        - [Slices](slices.md)
+        - [Set structures](set_structures.md)
+        - [Map structures](map_structures.md)
+        - [Iterators and ranges](iterators_and_ranges.md)
+        - [Other structures](other_structures.md)
 <!--         - [Comparison to sorting](README.md) -->
 <!--     - [Complete search](README.md) -->
 <!--         - [Generating subsets](README.md) -->

@@ -144,20 +144,32 @@ match array.binary_search(&x){
 
 ### Iterators
 
-In rust another very common solution to solve problems that include a search or if you want to perform operations on the elements of a collectionsjk.
-Iterators 
+In rust, another very common solution to solve problems involving a search or if you want to perform operations on elements of a collection, or even filter it, is to use iterators. 
 
-\begin{lstlisting}
-auto a = lower_bound(array, array+n, x);
-auto b = upper_bound(array, array+n, x);
-cout << b-a << "\n";
-\end{lstlisting}
+Iterators are implemented as traits, which means that they are defined in terms of a set of methods that must be implemented by anu type that wants to be an iterator.
+The most common way to create an iterator is to use the `iter()` method on a collection type, such as a vector or a string. For example, the following code creates an iterator over the numbers 1, 2, 3, 4:
 
-Using \texttt{equal\_range}, the code becomes shorter:
+```rust
+let numbers = vec![1,2,3,4];
+let numbers_iterator = numbers.iter();
+```
 
-\begin{lstlisting}
-auto r = equal_range(array, array+n, x);
-cout << r.second-r
+Iterator in Rust are very good in terms of performance:
+- They are lazy, so they don't actually iterate over the sequence of values until they are required to do so
+- They are composable, so they can be combined to create more complex iterators
+- They are generic, which means that they can be used with any type that implements the `Iterator` trait
+
+The following code counts the number of elements whose value is $x$:
+
+```rust
+# let array = vec![1,2,3,4,5,4,3,2,4,4,4,7];
+# let x = 4;
+let count = array.iter().filter(|&el| el==&x).count();
+# println!("Array is {array:?}");
+# println!("x is {x}");
+# println!("___");
+println!("{count}");
+```
 
 ## Finding the smallest solution
 
@@ -172,37 +184,86 @@ In addition, we know that `ok(x)` is `false`
 when `x<k` and `true` when `x >= k`.
 The situation looks as follows:
 
-\begin{center}
-\begin{tabular}{r|rrrrrrrr}
-$x$ & 0 & 1 & $\cdots$ & $k-1$ & $k$ & $k+1$ & $\cdots$ \\
-\hline
-$\texttt{ok}(x)$ & \texttt{false} & \texttt{false}
-& $\cdots$ & \texttt{false} & \texttt{true} & \texttt{true} & $\cdots$ \\
-\end{tabular}
-\end{center}
+| $x$ | 0 | 1 | $\cdots$ | $k-1$ | $k$ | $k+1$ | $\cdots$ |
+| ---:|---|---|----------|-------|-----|-------|----------|
+| $\texttt{ok}(x)$ | `false` | `false` | $\cdots$ | `false` | `true` | `true` | $\cdots$ |
 
-\noindent
-Now, the value of $k$ can be found using binary search:
+Now, the value of $k$ can be found using binary search by:
 
-\begin{lstlisting}
-int x = -1;
-for (int b = z; b >= 1; b /= 2) {
-    while (!ok(x+b)) x += b;
-}
-int k = x+1;
-\end{lstlisting}
+```rust
+# use std::cmp::Ordering;
+# let array = vec![1,2,3,4,5,7,8, 9, 12, 13, 14, 15];
+# let mut okx = vec![false; array.len()];
+# okx.iter_mut().enumerate().for_each(|(i, e)| *e = ok(&array[i]));
+# let k = 7;
+# fn ok(x: &usize) -> bool{ *x >= 7 };
+let ok = | x | {if ok(x) {return Ordering::Greater} Ordering::Less};
+let k = array.binary_search_by(ok);
+# println!("Array is {array:?}");
+# println!("ok(x) is {okx:?}");
+# println!("___");
+# println!("k is {k:?}");
+```
 
 The search finds the largest value of $x$ for which
-$\texttt{ok}(x)$ is \texttt{false}.
+`ok(x)` is `false`. To do so we can exploit a binary_search_by property: indeed the function returns a value also if the returned `Result` is `Err`, we create a simple closure that return an `Ordering`, from the moment that we want the very first `true` element, we can return `Ordering::Less` if `ok(x)` is `true` and `Ordering::Greater` if it is `false`.
 Thus, the next value $k=x+1$
 is the smallest possible value for which
-$\texttt{ok}(k)$ is \texttt{true}.
-The initial jump length $z$ has to be
-large enough, for example some value
-for which we know beforehand that $\texttt{ok}(z)$ is \texttt{true}.
+$ok(k)$ is `true`.
 
-The algorithm calls the function \texttt{ok}
+The algorithm calls the function `ok`
 $O(\log z)$ times, so the total time complexity
-depends on the function \texttt{ok}.
+depends on the function `ok`.
 For example, if the function works in $O(n)$ time,
 the total time complexity is $O(n \log z)$.
+
+## Find the maximum value
+
+Binary search can also be used to find
+the maximum value for a function that is
+first increasing and then decreasing.
+Our task is to find a position $k$ such that
+
+- $f(x) \le (x+1)$ when $x \le k$, and
+- $f(x) \ge (x+1)$ when $x \ge k$.
+
+The idea is to use binary search
+for finding the largest value of $x$
+for which $f(x)<f(x+1)$.
+This implies that $k=x+1$
+because $f(x+1)>f(x+2)$.
+The following code implements the search: 
+
+```rust
+# use std::cmp::Ordering;
+# let array = vec![11,12,13,14,65,9,8, 7, 6, 5, 4, 3, 2, 1];
+let f = | &x | { 
+    let i = array.iter().position(|el| el == &x).unwrap();
+    array[i].cmp(&array[i+1])
+};
+let k = array.binary_search_by(f);
+# println!("Array is {array:?}");
+# println!("___");
+# println!("k is {k:?}");
+```
+To better understand `binary_search_by`, you should just keep in mind that:
+- `Ordering::Less` in custom comparator function means that the final result is **in the right half** of the collection
+- `Ordering::Greater` in custom comparator function means that the final result is **in the left half**
+
+>    The verbose version of the above function would be:
+>    ```rust
+>        # use std::cmp::Ordering;
+>        # let array = vec![11,12,13,14,65,9,8, 7, 6, 5, 4, 3, 2, 1];
+>        let f = | &x | { 
+>            let i = array.iter().position(|el| el == &x).unwrap();
+>            if array[i] < array[i+1]{
+>                return Ordering::Less //go in the right half
+>            } else {
+>                return Ordering::Greater //go in left half
+>            }
+>        };
+>        let k = array.binary_search_by(f);
+>        # println!("Array is {array:?}");
+>        # println!("___");
+>        # println!("k is {k:?}");
+>    ```
