@@ -27,12 +27,12 @@
         - [Iterators and ranges](iterators_and_ranges.md)
         - [Other structures](other_structures.md)
         - [Comparison to sorting](comparison_to_sorting.md)
-<!--     - [Complete search](README.md) -->
-<!--         - [Generating subsets](README.md) -->
-<!--         - [Generating permutations](README.md) -->
-<!--         - [Backtracking](README.md) -->
-<!--         - [Pruning the search](README.md) -->
-<!--         - [Meet in the middle](README.md) -->
+    - [Complete search](complete_search.md)
+        - [Generating subsets](generating_subsets.md)
+        - [Generating permutations](generating_permutation.md)
+        - [Backtracking](backtracking.md)
+        - [Pruning the search](pruning_the_search.md)
+        - [Meet in the middle](meet_in_the_middle.md)
 <!--     - [Greedy algorithms](README.md) -->
 <!--         - [Coin problem](README.md) -->
 <!--         - [Scheduling](README.md) -->
