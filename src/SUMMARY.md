@@ -33,12 +33,12 @@
         - [Backtracking](backtracking.md)
         - [Pruning the search](pruning_the_search.md)
         - [Meet in the middle](meet_in_the_middle.md)
-<!--     - [Greedy algorithms](README.md) -->
-<!--         - [Coin problem](README.md) -->
-<!--         - [Scheduling](README.md) -->
-<!--         - [Tasks and deadlines](README.md) -->
-<!--         - [Minimizing sums](README.md) -->
-<!--         - [Data compression](README.md) -->
+    - [Greedy algorithms](greedy_argorithm.md)
+        - [Coin problem](coin_problem.md)
+        - [Scheduling](scheduling.md)
+        - [Tasks and deadlines](task_and_deadline.md)
+        - [Minimizing sums](minimizing_sums.md)
+        - [Data compression](data_compression.md)
 <!--     - [Dynamic programming](README.md) -->
 <!--         - [Coin problem](README.md) -->
 <!--         - [Longest increasing subsequence](README.md) -->
