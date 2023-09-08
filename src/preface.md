@@ -1,8 +1,7 @@
 # Preface
 
-Here a list of some useful resources that tell about Rust in Competitive programming:
 This book is from the original version [Competitive Programmer's Handbook](https://cses.fi/book/book.pdf) by [Antti Laaksonen](https://github.com/pllk).
-In this _Rust Version_ all the theoretical part will follow the Antii Laaksonen's version, except of course for all those parts that need to be adapt to the Rust context.
+In this _Rust Version_ all the theoretical part will follow the Antii Laaksonen's version, except of course for all those parts that need to be adapted to the Rust context.
 All code parts are rewritten from scratch.
 
 ## Contribution
