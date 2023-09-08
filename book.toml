@@ -7,6 +7,7 @@ title = "Competitive Programmer's Handbook - Rust Edition"
 
 [output.html]
 additional-css = ["assets/css/custom.css"]
+mathjax-support = true
 
 [preprocessor.katex]
 [preprocessor.graphviz]

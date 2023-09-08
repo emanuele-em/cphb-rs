@@ -39,11 +39,11 @@
         - [Tasks and deadlines](task_and_deadline.md)
         - [Minimizing sums](minimizing_sums.md)
         - [Data compression](data_compression.md)
-<!--     - [Dynamic programming](README.md) -->
-<!--         - [Coin problem](README.md) -->
-<!--         - [Longest increasing subsequence](README.md) -->
-<!--         - [Paths in a grid](README.md) -->
-<!--         - [Knapsack problems](README.md) -->
+    - [Dynamic programming](dynamic_programming.md)
+        - [Coin problem](dynamic_coin_problem.md)
+        - [Longest increasing subsequence](longest_increasing_subsequence.md)
+        - [Paths in a grid](path_in_a_grid.md)
+        - [Knapsack problems](knapsack_problems.md)
 <!--         - [Edit distance](README.md) -->
 <!--         - [Counting tilings](README.md) -->
 <!--     - [Amortized analysis](README.md) -->
