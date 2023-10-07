@@ -44,8 +44,8 @@
         - [Longest increasing subsequence](longest_increasing_subsequence.md)
         - [Paths in a grid](path_in_a_grid.md)
         - [Knapsack problems](knapsack_problems.md)
-<!--         - [Edit distance](README.md) -->
-<!--         - [Counting tilings](README.md) -->
+        - [Edit distance](edit_distance.md)
+        - [Counting tilings](counting_titlings.md)
 <!--     - [Amortized analysis](README.md) -->
 <!--         - [Two pointers method](README.md) -->
 <!--         - [Nearest smaller elements](README.md) -->
