@@ -46,10 +46,10 @@
         - [Knapsack problems](knapsack_problems.md)
         - [Edit distance](edit_distance.md)
         - [Counting tilings](counting_titlings.md)
-<!--     - [Amortized analysis](README.md) -->
-<!--         - [Two pointers method](README.md) -->
-<!--         - [Nearest smaller elements](README.md) -->
-<!--         - [Sliding window minimum](README.md) -->
+    - [Amortized analysis](amortized_analysis.md)
+        - [Two pointers method](two_pointers_method.md)
+        - [Nearest smaller elements](nearest_smaller_element.md)
+        - [Sliding window minimum](sliding_window_minimum.md)
 <!--     - [Range queries](README.md) -->
 <!--         - [Static array queries](README.md) -->
 <!--         - [Binary indexed tree](README.md) -->
