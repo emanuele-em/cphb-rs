@@ -189,7 +189,7 @@ be processed similarly,
 we can focus on minimum queries.
 
 The idea is to precalculate all values of
-$\textrm{min}_q(a,b)$ where
+$min_q(a,b)$ where
 $b-a+1$ (the length of the range) is a power of two.
 For example, for the array
 
@@ -197,179 +197,174 @@ For example, for the array
 \begin{tikzpicture}[scale=0.7]
 \draw (0,0) grid (8,1);
 
-\node at (0.5,0.5) {$1$};
-\node at (1.5,0.5) {$3$};
-\node at (2.5,0.5) {$4$};
-\node at (3.5,0.5) {$8$};
-\node at (4.5,0.5) {$6$};
-\node at (5.5,0.5) {$1$};
-\node at (6.5,0.5) {$4$};
-\node at (7.5,0.5) {$2$};
+\node at (0.5,0.5) {1};
+\node at (1.5,0.5) {3};
+\node at (2.5,0.5) {4};
+\node at (3.5,0.5) {8};
+\node at (4.5,0.5) {6};
+\node at (5.5,0.5) {1};
+\node at (6.5,0.5) {4};
+\node at (7.5,0.5) {2};
 
 \footnotesize
-\node at (0.5,1.4) {$0$};
-\node at (1.5,1.4) {$1$};
-\node at (2.5,1.4) {$2$};
-\node at (3.5,1.4) {$3$};
-\node at (4.5,1.4) {$4$};
-\node at (5.5,1.4) {$5$};
-\node at (6.5,1.4) {$6$};
-\node at (7.5,1.4) {$7$};
+\node at (0.5,1.4) {0};
+\node at (1.5,1.4) {1};
+\node at (2.5,1.4) {2};
+\node at (3.5,1.4) {3};
+\node at (4.5,1.4) {4};
+\node at (5.5,1.4) {5};
+\node at (6.5,1.4) {6};
+\node at (7.5,1.4) {7};
 \end{tikzpicture}
 </script>
 the following values are calculated:
 
-<script type="text/tikz">
-\begin{center}
-\begin{tabular}{ccc}
+| a | b | $min_q(a,b)$ |
+| --- | --- | :---: |
+| 0 | 0 | 1 |
+| 1 | 1 | 3 |
+| 2 | 2 | 4 |
+| 3 | 3 | 8 |
+| 4 | 4 | 6 |
+| 5 | 5 | 1 |
+| 6 | 6 | 4 |
+| 7 | 7 | 2 |
 
-\begin{tabular}{lll}
-$a$ & $b$ & $\texttt{min}_q(a,b)$ \\
-\hline
-0 & 0 & 1 \\
-1 & 1 & 3 \\
-2 & 2 & 4 \\
-3 & 3 & 8 \\
-4 & 4 & 6 \\
-5 & 5 & 1 \\
-6 & 6 & 4 \\
-7 & 7 & 2 \\
-\end{tabular}
+| a | b | $min_q(a,b)$ |
+| --- | --- | :---: |
+| 0 | 1 | 1 |
+| 1 | 2 | 3 |
+| 2 | 3 | 4 |
+| 3 | 4 | 6 |
+| 4 | 5 | 1 |
+| 5 | 6 | 1 |
+| 6 | 7 | 2 |
 
-&
-
-\begin{tabular}{lll}
-$a$ & $b$ & $\texttt{min}_q(a,b)$ \\
-\hline
-0 & 1 & 1 \\
-1 & 2 & 3 \\
-2 & 3 & 4 \\
-3 & 4 & 6 \\
-4 & 5 & 1 \\
-5 & 6 & 1 \\
-6 & 7 & 2 \\
-\\
-\end{tabular}
-
-&
-
-\begin{tabular}{lll}
-$a$ & $b$ & $\texttt{min}_q(a,b)$ \\
-\hline
-0 & 3 & 1 \\
-1 & 4 & 3 \\
-2 & 5 & 1 \\
-3 & 6 & 1 \\
-4 & 7 & 1 \\
-0 & 7 & 1 \\
-\\
-\\
-\end{tabular}
-
-\end{tabular}
-</script>
+| a | b | $min_q(a,b)$ |
+| --- | --- | :---: |
+| 0 | 3 | 1 |
+| 1 | 4 | 3 |
+| 2 | 5 | 1 |
+| 3 | 6 | 1 |
+| 4 | 7 | 1 |
+| 0 | 7 | 1 |
 
 The number of precalculated values is $O(n \log n)$,
 because there are $O(\log n)$ range lengths
 that are powers of two.
 The values can be calculated efficiently
 using the recursive formula
-\[\texttt{min}_q(a,b) = \min(\texttt{min}_q(a,a+w-1),\texttt{min}_q(a+w,b)),\]
+
+\\[
+\\texttt{min}_q(a,b) = \\min(\\texttt{min}_q(a,a+w-1),\\texttt{min}_q(a+w,b)),
+\\]
+
 where $b-a+1$ is a power of two and $w=(b-a+1)/2$.
 Calculating all those values takes $O(n \log n)$ time.
 
-After this, any value of $\texttt{min}_q(a,b)$ can be calculated
+After this, any value of $min_q(a,b)$ can be calculated
 in $O(1)$ time as a minimum of two precalculated values.
 Let $k$ be the largest power of two that does not exceed $b-a+1$.
-We can calculate the value of $\texttt{min}_q(a,b)$ using the formula
-\[\texttt{min}_q(a,b) = \min(\texttt{min}_q(a,a+k-1),\texttt{min}_q(b-k+1,b)).\]
-In the above formula, the range $[a,b]$ is represented
-as the union of the ranges $[a,a+k-1]$ and $[b-k+1,b]$, both of length $k$.
+We can calculate the value of $min_q(a,b)$ using the formula
 
-As an example, consider the range $[1,6]$:
-\begin{center}
+\\[
+\\texttt{min}_q(a,b) = \\min(\\texttt{min}_q(a,a+k-1),\\texttt{min}_q(b-k+1,b))
+\\]
+
+In the above formula, the range \\( [a,b] \\) is represented
+as the union of the ranges \\( [a,a+k-1]\\)  and \\([b-k+1,b]\\), both of length $k$.
+
+As an example, consider the range \\([1,6]\\):
+
+<script type="text/tikz">
 \begin{tikzpicture}[scale=0.7]
 \fill[color=lightgray] (1,0) rectangle (7,1);
 \draw (0,0) grid (8,1);
 
-\node at (0.5,0.5) {$1$};
-\node at (1.5,0.5) {$3$};
-\node at (2.5,0.5) {$4$};
-\node at (3.5,0.5) {$8$};
-\node at (4.5,0.5) {$6$};
-\node at (5.5,0.5) {$1$};
-\node at (6.5,0.5) {$4$};
-\node at (7.5,0.5) {$2$};
+\node at (0.5,0.5) {1};
+\node at (1.5,0.5) {3};
+\node at (2.5,0.5) {4};
+\node at (3.5,0.5) {8};
+\node at (4.5,0.5) {6};
+\node at (5.5,0.5) {1};
+\node at (6.5,0.5) {4};
+\node at (7.5,0.5) {2};
 
 \footnotesize
-\node at (0.5,1.4) {$0$};
-\node at (1.5,1.4) {$1$};
-\node at (2.5,1.4) {$2$};
-\node at (3.5,1.4) {$3$};
-\node at (4.5,1.4) {$4$};
-\node at (5.5,1.4) {$5$};
-\node at (6.5,1.4) {$6$};
-\node at (7.5,1.4) {$7$};
+\node at (0.5,1.4) {0};
+\node at (1.5,1.4) {1};
+\node at (2.5,1.4) {2};
+\node at (3.5,1.4) {3};
+\node at (4.5,1.4) {4};
+\node at (5.5,1.4) {5};
+\node at (6.5,1.4) {6};
+\node at (7.5,1.4) {7};
 \end{tikzpicture}
-\end{center}
+</script>
+
 The length of the range is 6,
 and the largest power of two that does
 not exceed 6 is 4.
-Thus the range $[1,6]$ is
-the union of the ranges $[1,4]$ and $[3,6]$:
-\begin{center}
+Thus the range \\([1,6]\\) is
+the union of the ranges \\([1,4]\\) and \\([3,6]\\):
+
+<script type="text/tikz">
 \begin{tikzpicture}[scale=0.7]
 \fill[color=lightgray] (1,0) rectangle (5,1);
 \draw (0,0) grid (8,1);
 
-\node at (0.5,0.5) {$1$};
-\node at (1.5,0.5) {$3$};
-\node at (2.5,0.5) {$4$};
-\node at (3.5,0.5) {$8$};
-\node at (4.5,0.5) {$6$};
-\node at (5.5,0.5) {$1$};
-\node at (6.5,0.5) {$4$};
-\node at (7.5,0.5) {$2$};
+\node at (0.5,0.5) {1};
+\node at (1.5,0.5) {3};
+\node at (2.5,0.5) {4};
+\node at (3.5,0.5) {8};
+\node at (4.5,0.5) {6};
+\node at (5.5,0.5) {1};
+\node at (6.5,0.5) {4};
+\node at (7.5,0.5) {2};
 
 \footnotesize
-\node at (0.5,1.4) {$0$};
-\node at (1.5,1.4) {$1$};
-\node at (2.5,1.4) {$2$};
-\node at (3.5,1.4) {$3$};
-\node at (4.5,1.4) {$4$};
-\node at (5.5,1.4) {$5$};
-\node at (6.5,1.4) {$6$};
-\node at (7.5,1.4) {$7$};
+\node at (0.5,1.4) {0};
+\node at (1.5,1.4) {1};
+\node at (2.5,1.4) {2};
+\node at (3.5,1.4) {3};
+\node at (4.5,1.4) {4};
+\node at (5.5,1.4) {5};
+\node at (6.5,1.4) {6};
+\node at (7.5,1.4) {7};
 \end{tikzpicture}
-\end{center}
-\begin{center}
+</script>
+
+ 
+
+<script type="text/tikz">
 \begin{tikzpicture}[scale=0.7]
 \fill[color=lightgray] (3,0) rectangle (7,1);
 \draw (0,0) grid (8,1);
 
-\node at (0.5,0.5) {$1$};
-\node at (1.5,0.5) {$3$};
-\node at (2.5,0.5) {$4$};
-\node at (3.5,0.5) {$8$};
-\node at (4.5,0.5) {$6$};
-\node at (5.5,0.5) {$1$};
-\node at (6.5,0.5) {$4$};
-\node at (7.5,0.5) {$2$};
+\node at (0.5,0.5) {1};
+\node at (1.5,0.5) {3};
+\node at (2.5,0.5) {4};
+\node at (3.5,0.5) {8};
+\node at (4.5,0.5) {6};
+\node at (5.5,0.5) {1};
+\node at (6.5,0.5) {4};
+\node at (7.5,0.5) {2};
 
 
 \footnotesize
-\node at (0.5,1.4) {$0$};
-\node at (1.5,1.4) {$1$};
-\node at (2.5,1.4) {$2$};
-\node at (3.5,1.4) {$3$};
-\node at (4.5,1.4) {$4$};
-\node at (5.5,1.4) {$5$};
-\node at (6.5,1.4) {$6$};
-\node at (7.5,1.4) {$7$};
+\node at (0.5,1.4) {0};
+\node at (1.5,1.4) {1};
+\node at (2.5,1.4) {2};
+\node at (3.5,1.4) {3};
+\node at (4.5,1.4) {4};
+\node at (5.5,1.4) {5};
+\node at (6.5,1.4) {6};
+\node at (7.5,1.4) {7};
 \end{tikzpicture}
-\end{center}
-Since $\texttt{min}_q(1,4)=3$ and $\texttt{min}_q(3,6)=1$,
-we conclude that $\texttt{min}_q(1,6)=1$.
+</script>
+
+Since $min_q(1,4)=3$ and $min_q(3,6)=1$,
+we conclude that $min_q(1,6)=1$.
 
 ___
 
