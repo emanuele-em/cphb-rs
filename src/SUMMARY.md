@@ -52,7 +52,7 @@
         - [Sliding window minimum](sliding_window_minimum.md)
     - [Range queries](range_queries.md)
         - [Static array queries](static_array_queries.md)
-<!--         - [Binary indexed tree](README.md) -->
+        - [Binary indexed tree](binary_indexed_tree.md)
 <!--         - [Segment tree](README.md) -->
 <!--         - [Additional techniques](README.md) -->
 <!--     - [Bit manipulation](README.md) -->

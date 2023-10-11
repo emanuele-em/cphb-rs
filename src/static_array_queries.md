@@ -7,7 +7,7 @@ In this case, it suffices to construct
 a static data structure that tells us
 the answer for any possible query.
 
-### Sum queries
+## Sum queries
 
 We can easily process
 sum queries on a static array
@@ -176,7 +176,7 @@ in a rectangular
 subarray from the upper-left corner
 to the position of $X$.
 
-### Minimum queries
+## Minimum queries
 
 Minimum queries are more difficult to process
 than sum queries.
