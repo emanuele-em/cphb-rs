@@ -53,7 +53,7 @@
     - [Range queries](range_queries.md)
         - [Static array queries](static_array_queries.md)
         - [Binary indexed tree](binary_indexed_tree.md)
-<!--         - [Segment tree](README.md) -->
+        - [Segment tree](segment_tree.md)
 <!--         - [Additional techniques](README.md) -->
 <!--     - [Bit manipulation](README.md) -->
 <!--         - [ Bit representation](README.md) -->
