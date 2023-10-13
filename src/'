@@ -54,7 +54,7 @@
         - [Static array queries](static_array_queries.md)
         - [Binary indexed tree](binary_indexed_tree.md)
         - [Segment tree](segment_tree.md)
-        - [Additional techniques](additional_techniques.md)
+        - [Additional techniques](README.md)
 <!--     - [Bit manipulation](README.md) -->
 <!--         - [ Bit representation](README.md) -->
 <!--         - [ Bit operations](README.md) -->
