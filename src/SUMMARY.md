@@ -55,9 +55,9 @@
         - [Binary indexed tree](binary_indexed_tree.md)
         - [Segment tree](segment_tree.md)
         - [Additional techniques](additional_techniques.md)
-<!--     - [Bit manipulation](README.md) -->
-<!--         - [ Bit representation](README.md) -->
-<!--         - [ Bit operations](README.md) -->
+    - [Bit manipulation](bit_manipulation.md)
+        - [ Bit representation](bit_representation.md)
+        - [ Bit operations](bit_operations.md)
 <!--         - [ Representing sets](README.md) -->
 <!--         - [ Bit optimizations](README.md) -->
 <!--         - [ Dynamic programming](README.md) -->
