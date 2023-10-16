@@ -77,3 +77,47 @@ let z: i32 = x|y;
 # println!("z => {z:b}");
 println!("{}", z.count_ones());
 ```
+
+## Iterating through subsets
+
+The following code goes through
+the subsets of $\{0,1,\ldots,n-1\}$:
+
+```rust
+# let n = 10;
+let mut b=0;
+while b < (1<<n) {
+    // process subset b
+    # println!("b={b}, n={n}");
+    b+=1;
+}
+```
+
+The following code goes through
+the subsets with exactly $k$ elements:
+
+```rust
+let mut b = 0_i32;
+# let k = 4;
+# let n = 10;
+while b < (1<<n) {
+    if (b.count_ones() == k) {
+        # println!("b={b}, k={k}");
+        // process subset b
+    }
+    b+=1;
+}
+```
+The following code goes through the subsets
+of a set $x$:
+
+```rust
+let mut b = 0;
+# let x = 10;
+loop {
+    // process subset b
+    # println!("b={b}, x={x}");
+    b = (b-x)&x; 
+    if b == 0 {break;}
+}
+```

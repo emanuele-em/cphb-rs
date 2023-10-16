@@ -59,7 +59,7 @@
         - [ Bit representation](bit_representation.md)
         - [ Bit operations](bit_operations.md)
         - [ Representing sets](representing_sets.md)
-<!--         - [ Bit optimizations](README.md) -->
+        - [ Bit optimizations](bit_optimizations.md)
 <!--         - [ Dynamic programming](README.md) -->
 <!-- - [Graph algorithms](README.md) -->
 <!--     - [Basics of graphs](README.md) -->
