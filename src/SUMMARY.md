@@ -2,7 +2,7 @@
 
 [Preface](preface.md)
 
-- [Basic Techniques](introduction.md)
+- [Basic Techniques](basic_techniques.md)
     - [Introduction](introduction.md)
         - [Rust competitive helper](rust_competitive_helper.md)
         - [Input and output](input_and_output.md)
@@ -61,9 +61,9 @@
         - [ Representing sets](representing_sets.md)
         - [ Bit optimizations](bit_optimizations.md)
         - [ Dynamic programming](dyn_programming.md)
-<!-- - [Graph algorithms](README.md) -->
-<!--     - [Basics of graphs](README.md) -->
-<!--         - [ Graph terminology](README.md) -->
+- [Graph algorithms](graph_algorithm.md)
+    - [Basics of graphs](basic_of_graph.md)
+        - [ Graph terminology](graph_terminology.md)
 <!--         - [ Graph representation](README.md) -->
 <!--     - [Graph traversal](README.md) -->
 <!--         - [ Depth-first search](README.md) -->
