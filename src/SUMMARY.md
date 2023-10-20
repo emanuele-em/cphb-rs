@@ -64,7 +64,7 @@
 - [Graph algorithms](graph_algorithm.md)
     - [Basics of graphs](basic_of_graph.md)
         - [ Graph terminology](graph_terminology.md)
-<!--         - [ Graph representation](README.md) -->
+        - [ Graph representation](graph_representation.md)
 <!--     - [Graph traversal](README.md) -->
 <!--         - [ Depth-first search](README.md) -->
 <!--         - [ Breadth-first search](README.md) -->
