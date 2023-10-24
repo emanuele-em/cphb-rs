@@ -65,9 +65,9 @@
     - [Basics of graphs](basic_of_graph.md)
         - [ Graph terminology](graph_terminology.md)
         - [ Graph representation](graph_representation.md)
-<!--     - [Graph traversal](README.md) -->
-<!--         - [ Depth-first search](README.md) -->
-<!--         - [ Breadth-first search](README.md) -->
+    - [Graph traversal](graph_traversal.md)
+        - [ Depth-first search](depth_first_search.md)
+        - [ Breadth-first search](breadth_first_search.md)
 <!--         - [ Applications](README.md) -->
 <!--     - [Shortest paths](README.md) -->
 <!--         - [Bellman–Ford algorithm](README.md) -->
