@@ -143,3 +143,64 @@ Like in depth-first search,
 the time complexity of breadth-first search
 is $O(n+m)$, where $n$ is the number of nodes
 and $m$ is the number of edges.
+
+
+## Implementation
+
+Breadth-first search is more difficult
+to implement than depth-first search,
+because the algorithm visits nodes
+in different parts of the graph.
+A typical implementation is based on
+a queue that contains nodes.
+At each step, the next node in the queue
+will be processed.
+
+The following code assumes that the graph is stored
+as adjacency lists and maintains the following
+data structures:
+
+```rust
+# use std::collections::VecDeque;
+# const N:usize = 10;
+let mut q = VecDeque::<usize>::new();
+let mut visited = [false; 10];
+let mut distance = [0; 10];
+```
+
+The queue _q_
+contains nodes to be processed
+in increasing order of their distance.
+New nodes are always added to the end
+of the queue, and the node at the beginning
+of the queue is the next node to be processed.
+The array _visited_ indicates
+which nodes the search has already visited,
+and the array _distance_ will contain the
+distances from the starting node to all nodes of the graph.
+
+The search can be implemented as follows,
+starting at node $x$:
+
+```rust
+# use std::collections::VecDeque;
+# const N:usize = 10;
+# let mut q = VecDeque::<usize>::new();
+# let mut visited = [false; 10];
+# let mut distance = [0; 10];
+# let mut adj: [Vec<usize>; N]= Default::default();
+# let x = 0;
+visited[x] = true;
+distance[x] = 0;
+q.push_front(x);
+while !q.is_empty() {
+    let s = q.pop_front().unwrap();
+    // process node s
+    for &u in &adj[s] {
+        if visited[u] {continue}
+        visited[u] = true;
+        distance[u] = distance[s]+1;
+        q.push_front(u);
+    }
+}
+```

@@ -68,7 +68,7 @@
     - [Graph traversal](graph_traversal.md)
         - [ Depth-first search](depth_first_search.md)
         - [ Breadth-first search](breadth_first_search.md)
-<!--         - [ Applications](README.md) -->
+        - [ Applications](applications.md)
 <!--     - [Shortest paths](README.md) -->
 <!--         - [Bellman–Ford algorithm](README.md) -->
 <!--         - [Dijkstra’s algorithm](README.md) -->
