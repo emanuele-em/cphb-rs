@@ -170,7 +170,7 @@ proceeds as follows:
 \node[draw, circle,fill=blue!40] (1) at (3,5) {1};
 \node[draw, circle,fill=blue!40] (3) at (7,4) {3};
 \node[draw, circle,fill=red!40] (5) at (5,3) {5};
-\node[draw, circle] (4) at (3,3) {$4$};
+\node[draw, circle] (4) at (3,3) {4};
 
 \path[draw,thick,-] (1) -- (2);
 \path[draw,thick,-] (2) -- (5);

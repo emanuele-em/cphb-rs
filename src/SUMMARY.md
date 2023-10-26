@@ -69,8 +69,8 @@
         - [ Depth-first search](depth_first_search.md)
         - [ Breadth-first search](breadth_first_search.md)
         - [ Applications](applications.md)
-<!--     - [Shortest paths](README.md) -->
-<!--         - [Bellman–Ford algorithm](README.md) -->
+    - [Shortest paths](shortest_path.md)
+        - [Bellman–Ford algorithm](bellman_ford_algorithm.md)
 <!--         - [Dijkstra’s algorithm](README.md) -->
 <!--         - [Floyd–Warshall algorithm](README.md) -->
 <!--     - [Tree algorithms](README.md) -->
