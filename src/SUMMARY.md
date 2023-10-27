@@ -71,7 +71,7 @@
         - [ Applications](applications.md)
     - [Shortest paths](shortest_path.md)
         - [Bellman–Ford algorithm](bellman_ford_algorithm.md)
-<!--         - [Dijkstra’s algorithm](README.md) -->
+        - [Dijkstra’s algorithm](dijkstra_s_algorithm.md)
 <!--         - [Floyd–Warshall algorithm](README.md) -->
 <!--     - [Tree algorithms](README.md) -->
 <!--         - [Tree traversal](README.md) -->

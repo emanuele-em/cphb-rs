@@ -261,6 +261,32 @@ search for
 a negative cycle in the whole graph
 regardless of the starting node.
 
+## SPFA Algorithm
+
+The **SPFA algorithm** (_Shortest Path Faster Algorithm_) [20]
+is a variant of the Bellman–Ford algorithm,
+that is often more efficient than the original algorithm.
+The SPFA algorithm does not go through all the edges on each round,
+but instead, it chooses the edges to be examined
+in a more intelligent way.
+
+The algorithm maintains a queue of nodes that might
+be used for reducing the distances.
+First, the algorithm adds the starting node $x$
+to the queue.
+Then, the algorithm always processes the
+first node in the queue, and when an edge
+$a \rightarrow b$ reduces a distance,
+node $b$ is added to the queue.
+
+The efficiency of the SPFA algorithm depends
+on the structure of the graph:
+the algorithm is often efficient,
+but its worst case time complexity is still
+$O(nm)$ and it is possible to create inputs
+that make the algorithm as slow as the
+original Bellman–Ford algorithm.
+
 ___
 
 [^1] The algorithm is named after R. E. Bellman and L. R. Ford who published it independently in 1958 and 1956, respectively [5, 24]
