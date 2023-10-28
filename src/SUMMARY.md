@@ -72,7 +72,7 @@
     - [Shortest paths](shortest_path.md)
         - [Bellman–Ford algorithm](bellman_ford_algorithm.md)
         - [Dijkstra’s algorithm](dijkstra_s_algorithm.md)
-<!--         - [Floyd–Warshall algorithm](README.md) -->
+        - [Floyd–Warshall algorithm](floyd_warshall_algorithm.md)
 <!--     - [Tree algorithms](README.md) -->
 <!--         - [Tree traversal](README.md) -->
 <!--         - [Diameter](README.md) -->
