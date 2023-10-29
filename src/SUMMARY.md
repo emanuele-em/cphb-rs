@@ -73,9 +73,9 @@
         - [Bellman–Ford algorithm](bellman_ford_algorithm.md)
         - [Dijkstra’s algorithm](dijkstra_s_algorithm.md)
         - [Floyd–Warshall algorithm](floyd_warshall_algorithm.md)
-<!--     - [Tree algorithms](README.md) -->
-<!--         - [Tree traversal](README.md) -->
-<!--         - [Diameter](README.md) -->
+    - [Tree algorithms](tree_algorithm.md)
+        - [Tree traversal](tree_traversal.md)
+        - [Diameter](diameter.md)
 <!--         - [All longest paths](README.md) -->
 <!--         - [Binary trees](README.md) -->
 <!--     - [Spanning trees](README.md) -->
