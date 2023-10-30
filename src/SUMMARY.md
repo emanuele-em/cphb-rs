@@ -76,8 +76,8 @@
     - [Tree algorithms](tree_algorithm.md)
         - [Tree traversal](tree_traversal.md)
         - [Diameter](diameter.md)
-<!--         - [All longest paths](README.md) -->
-<!--         - [Binary trees](README.md) -->
+        - [All longest paths](all_longest_paths.md)
+        - [Binary trees](binary_trees.md)
 <!--     - [Spanning trees](README.md) -->
 <!--         - [Kruskal’s algorithm](README.md) -->
 <!--         - [Union-find structure](README.md) -->
