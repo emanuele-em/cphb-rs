@@ -78,8 +78,8 @@
         - [Diameter](diameter.md)
         - [All longest paths](all_longest_paths.md)
         - [Binary trees](binary_trees.md)
-<!--     - [Spanning trees](README.md) -->
-<!--         - [Kruskal’s algorithm](README.md) -->
+    - [Spanning trees](spanning_trees.md)
+        - [Kruskal’s algorithm](kruskal_s_algorithm.md)
 <!--         - [Union-find structure](README.md) -->
 <!--         - [Prim’s algorithm](README.md) -->
 <!--     - [Directed graphs](README.md) -->
