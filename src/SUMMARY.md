@@ -80,7 +80,7 @@
         - [Binary trees](binary_trees.md)
     - [Spanning trees](spanning_trees.md)
         - [Kruskal’s algorithm](kruskal_s_algorithm.md)
-<!--         - [Union-find structure](README.md) -->
+        - [Union-find structure](union_find_structure.md)
 <!--         - [Prim’s algorithm](README.md) -->
 <!--     - [Directed graphs](README.md) -->
 <!--         - [Topological sorting](README.md) -->
