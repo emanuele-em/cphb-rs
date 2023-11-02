@@ -81,9 +81,9 @@
     - [Spanning trees](spanning_trees.md)
         - [Kruskal’s algorithm](kruskal_s_algorithm.md)
         - [Union-find structure](union_find_structure.md)
-<!--         - [Prim’s algorithm](README.md) -->
-<!--     - [Directed graphs](README.md) -->
-<!--         - [Topological sorting](README.md) -->
+        - [Prim’s algorithm](prim_s_algorithm.md)
+    - [Directed graphs](directed_graphs.md)
+        - [Topological sorting](topological_sorting.md)
 <!--         - [Dynamic programming](README.md) -->
 <!--         - [Successor paths](README.md) -->
 <!--         - [Cycle detection](README.md) -->
