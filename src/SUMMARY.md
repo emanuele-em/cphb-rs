@@ -84,7 +84,7 @@
         - [Prim’s algorithm](prim_s_algorithm.md)
     - [Directed graphs](directed_graphs.md)
         - [Topological sorting](topological_sorting.md)
-<!--         - [Dynamic programming](README.md) -->
+        - [Dynamic programming](dynamic_programming_directed_graphs.md)
 <!--         - [Successor paths](README.md) -->
 <!--         - [Cycle detection](README.md) -->
 <!--     - [Strong connectivity](README.md) -->
