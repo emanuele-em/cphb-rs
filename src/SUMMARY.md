@@ -85,8 +85,8 @@
     - [Directed graphs](directed_graphs.md)
         - [Topological sorting](topological_sorting.md)
         - [Dynamic programming](dynamic_programming_directed_graphs.md)
-<!--         - [Successor paths](README.md) -->
-<!--         - [Cycle detection](README.md) -->
+        - [Successor paths](successor_path.md)
+        - [Cycle detection](cycle_detection.md)
 <!--     - [Strong connectivity](README.md) -->
 <!--         - [Kosaraju’s algorithm](README.md) -->
 <!--         - [2SAT problem](README.md) -->
