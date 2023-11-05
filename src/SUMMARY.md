@@ -87,8 +87,8 @@
         - [Dynamic programming](dynamic_programming_directed_graphs.md)
         - [Successor paths](successor_path.md)
         - [Cycle detection](cycle_detection.md)
-<!--     - [Strong connectivity](README.md) -->
-<!--         - [Kosaraju’s algorithm](README.md) -->
+    - [Strong connectivity](strong_connectivity.md)
+        - [Kosaraju’s algorithm](kosaraju_s_algorithm.md)
 <!--         - [2SAT problem](README.md) -->
 <!--     - [Tree queries](README.md) -->
 <!--         - [Finding ancestors](README.md) -->
