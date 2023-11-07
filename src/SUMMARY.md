@@ -90,9 +90,9 @@
     - [Strong connectivity](strong_connectivity.md)
         - [Kosaraju’s algorithm](kosaraju_s_algorithm.md)
         - [2SAT problem](2sat_problem.md)
-<!--     - [Tree queries](README.md) -->
-<!--         - [Finding ancestors](README.md) -->
-<!--         - [Subtrees and paths](README.md) -->
+    - [Tree queries](tree_queries.md)
+        - [Finding ancestors](finding_ancestors.md)
+        - [Subtrees and paths](subtrees_and_paths.md)
 <!--         - [Lowest common ancestor](README.md) -->
 <!--         - [Offline algorithms](README.md) -->
 <!--     - [Paths and circuits](README.md) -->
