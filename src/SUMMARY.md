@@ -94,7 +94,7 @@
         - [Finding ancestors](finding_ancestors.md)
         - [Subtrees and paths](subtrees_and_paths.md)
         - [Lowest common ancestor](lowest_common_ancestor.md)
-<!--         - [Offline algorithms](README.md) -->
+        - [Offline algorithms](offline_algorithms.md)
 <!--     - [Paths and circuits](README.md) -->
 <!--         - [Eulerian paths](README.md) -->
 <!--         - [Hamiltonian paths](README.md) -->

@@ -231,23 +231,20 @@ The following array corresponds to the above tree:
 </script>
 
 Now we can find the lowest common ancestor
-of nodes $a$ and $b$ by finding the node with the \emph{minimum} depth
+of nodes $a$ and $b$ by finding the node with the _minimum_ depth
 between nodes $a$ and $b$ in the array.
 For example, the lowest common ancestor of nodes $5$ and $8$
 can be found as follows:
 
 <script type="text/tikz">
 \begin{tikzpicture}[scale=0.7]
-
 \node[left] at (-1,1.5) {node id};
 \node[left] at (-1,0.5) {depth};
-
 \fill[color=lightgray] (2,1) rectangle (3,2);
 \fill[color=lightgray] (5,1) rectangle (6,2);
 \fill[color=lightgray] (2,0) rectangle (6,1);
 
-\node at (3.5,-0.5) {$\uparrow$};
-
+\node at (3.5,-0.5) {\(\uparrow\)};
 \draw (0,1) grid (15,2);
 \node at (0.5,1.5) {1};
 \node at (1.5,1.5) {2};
@@ -264,8 +261,6 @@ can be found as follows:
 \node at (12.5,1.5) {7};
 \node at (13.5,1.5) {4};
 \node at (14.5,1.5) {1};
-
-
 \draw (0,0) grid (15,1);
 \node at (0.5,0.5) {1};
 \node at (1.5,0.5) {2};
@@ -315,7 +310,53 @@ minimum query.
 Since the array is static,
 we can process such queries in $O(1)$ time
 after an $O(n \log n)$ time preprocessing.
--
+
+The distance between nodes $a$ and $b$
+equals the length of the path from $a$ to $b$.
+It turns out that the problem of calculating
+the distance between nodes reduces to
+finding their lowest common ancestor.
+
+First, we root the tree arbitrarily.
+After this, the distance of nodes $a$ and $b$
+can be calculated using the formula
+
+\\[
+\\texttt{depth}(a)+\\texttt{depth}(b)-2 \\cdot \\texttt{depth}(c)
+\\]
+
+where $c$ is the lowest common ancestor of $a$ and $b$
+and `depth(s)` denotes the depth of node $s$.
+For example, consider the distance of nodes 5 and 8:
+
+<script type="text/tikz">
+\begin{tikzpicture}[scale=0.9]
+\node[draw, circle] (1) at (0,3) {1};
+\node[draw, circle] (2) at (2,1) {4};
+\node[draw, circle] (3) at (-2,1) {2};
+\node[draw, circle] (4) at (0,1) {3};
+\node[draw, circle] (5) at (2,-1) {7};
+\node[draw, circle, fill=lightgray] (6) at (-3,-1) {5};
+\node[draw, circle] (7) at (-1,-1) {6};
+\node[draw, circle, fill=lightgray] (8) at (-1,-3) {8};
+\path[draw,thick,-] (1) -- (2);
+\path[draw,thick,-] (1) -- (3);
+\path[draw,thick,-] (1) -- (4);
+\path[draw,thick,-] (2) -- (5);
+\path[draw,thick,-] (3) -- (6);
+\path[draw,thick,-] (3) -- (7);
+\path[draw,thick,-] (7) -- (8);
+
+\path[draw=red,thick,->,line width=2pt] (6) edge [bend left] (3);
+\path[draw=red,thick,->,line width=2pt] (8) edge [bend right=40] (3);
+\end{tikzpicture}
+</script>
+
+The lowest common ancestor of nodes 5 and 8 is node 2.
+The depths of the nodes are
+`depth(5)=3`, `depth(8)=4` and `depth(2)=2`,
+so the distance between nodes 5 and 8 is
+$3+4-2\cdot2=3$.
 
 ___
 
