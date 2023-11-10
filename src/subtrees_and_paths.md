@@ -305,3 +305,149 @@ it suffices to store the values of the
 nodes in a binary indexed or segment tree.
 After this, we can both update a value
 and calculate the sum of values in $O(\log n)$ time.
+
+## Path queries
+
+Using a tree traversal array, we can also efficiently
+calculate sums of values on
+paths from the root node to any
+node of the tree.
+Consider a problem where our task
+is to support the following queries:
+
+- change the value of a node
+- calculate the sum of values on a path from the root to a node
+
+For example, in the following tree,
+the sum of values from the root node to node 7 is
+$4+5+5=14$:
+
+<script type="text/tikz">
+\begin{tikzpicture}[scale=0.9]
+\node[draw, circle] (1) at (0,3) {1};
+\node[draw, circle] (2) at (-3,1) {2};
+\node[draw, circle] (3) at (-1,1) {3};
+\node[draw, circle] (4) at (1,1) {4};
+\node[draw, circle] (5) at (3,1) {5};
+\node[draw, circle] (6) at (-3,-1) {6};
+\node[draw, circle] (7) at (-0.5,-1) {7};
+\node[draw, circle] (8) at (1,-1) {8};
+\node[draw, circle] (9) at (2.5,-1) {9};
+
+\path[draw,thick,-] (1) -- (2);
+\path[draw,thick,-] (1) -- (3);
+\path[draw,thick,-] (1) -- (4);
+\path[draw,thick,-] (1) -- (5);
+\path[draw,thick,-] (2) -- (6);
+\path[draw,thick,-] (4) -- (7);
+\path[draw,thick,-] (4) -- (8);
+\path[draw,thick,-] (4) -- (9);
+
+\node[color=blue] at (0,3+0.65) {4};
+\node[color=blue] at (-3-0.65,1) {5};
+\node[color=blue] at (-1-0.65,1) {3};
+\node[color=blue] at (1+0.65,1) {5};
+\node[color=blue] at (3+0.65,1) {2};
+\node[color=blue] at (-3,-1-0.65) {3};
+\node[color=blue] at (-0.5,-1-0.65) {5};
+\node[color=blue] at (1,-1-0.65) {3};
+\node[color=blue] at (2.5,-1-0.65) {1};
+\end{tikzpicture}
+</script>
+
+We can solve this problem like before,
+but now each value in the last row of the array is the sum of values
+on a path from the root to the node.
+For example, the following array corresponds to the above tree:
+
+\begin{tikzpicture}[scale=0.7]
+\draw (0,1) grid (9,-2);
+
+\node[left] at (-1,0.5) {node id};
+\node[left] at (-1,-0.5) {subtree size};
+\node[left] at (-1,-1.5) {path sum};
+
+\node at (0.5,0.5) {1};
+\node at (1.5,0.5) {2};
+\node at (2.5,0.5) {6};
+\node at (3.5,0.5) {3};
+\node at (4.5,0.5) {4};
+\node at (5.5,0.5) {7};
+\node at (6.5,0.5) {8};
+\node at (7.5,0.5) {9};
+\node at (8.5,0.5) {5};
+
+\node at (0.5,-0.5) {9};
+\node at (1.5,-0.5) {2};
+\node at (2.5,-0.5) {1};
+\node at (3.5,-0.5) {1};
+\node at (4.5,-0.5) {4};
+\node at (5.5,-0.5) {1};
+\node at (6.5,-0.5) {1};
+\node at (7.5,-0.5) {1};
+\node at (8.5,-0.5) {1};
+
+\node at (0.5,-1.5) {4};
+\node at (1.5,-1.5) {9};
+\node at (2.5,-1.5) {12};
+\node at (3.5,-1.5) {7};
+\node at (4.5,-1.5) {9};
+\node at (5.5,-1.5) {14};
+\node at (6.5,-1.5) {12};
+\node at (7.5,-1.5) {10};
+\node at (8.5,-1.5) {6};
+\end{tikzpicture}
+
+When the value of a node increases by $x$,
+the sums of all nodes in its subtree increase by $x$.
+For example, if the value of node 4 increases by 1,
+the array changes as follows:
+
+
+<script type="text/tikz">
+\begin{tikzpicture}[scale=0.7]
+\fill[color=lightgray] (4,-1) rectangle (8,-2);
+\draw (0,1) grid (9,-2);
+
+\node[left] at (-1,0.5) {node id};
+\node[left] at (-1,-0.5) {subtree size};
+\node[left] at (-1,-1.5) {path sum};
+
+\node at (0.5,0.5) {1};
+\node at (1.5,0.5) {2};
+\node at (2.5,0.5) {6};
+\node at (3.5,0.5) {3};
+\node at (4.5,0.5) {4};
+\node at (5.5,0.5) {7};
+\node at (6.5,0.5) {8};
+\node at (7.5,0.5) {9};
+\node at (8.5,0.5) {5};
+
+\node at (0.5,-0.5) {9};
+\node at (1.5,-0.5) {2};
+\node at (2.5,-0.5) {1};
+\node at (3.5,-0.5) {1};
+\node at (4.5,-0.5) {4};
+\node at (5.5,-0.5) {1};
+\node at (6.5,-0.5) {1};
+\node at (7.5,-0.5) {1};
+\node at (8.5,-0.5) {1};
+
+\node at (0.5,-1.5) {4};
+\node at (1.5,-1.5) {9};
+\node at (2.5,-1.5) {12};
+\node at (3.5,-1.5) {7};
+\node at (4.5,-1.5) {10};
+\node at (5.5,-1.5) {15};
+\node at (6.5,-1.5) {13};
+\node at (7.5,-1.5) {11};
+\node at (8.5,-1.5) {6};
+\end{tikzpicture}
+</script>
+
+Thus, to support both the operations,
+we should be able to increase all values
+in a range and retrieve a single value.
+This can be done in $O(\log n)$ time
+using a binary indexed
+or segment tree (see Chapter 9.4).
