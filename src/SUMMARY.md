@@ -95,8 +95,8 @@
         - [Subtrees and paths](subtrees_and_paths.md)
         - [Lowest common ancestor](lowest_common_ancestor.md)
         - [Offline algorithms](offline_algorithms.md)
-<!--     - [Paths and circuits](README.md) -->
-<!--         - [Eulerian paths](README.md) -->
+    - [Paths and circuits](path_and_circuit.md)
+        - [Eulerian paths](eulerian_paths.md)
 <!--         - [Hamiltonian paths](README.md) -->
 <!--         - [De Bruijn sequences](README.md) -->
 <!--         - [Knight’s tours](README.md) -->
