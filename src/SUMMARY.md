@@ -97,10 +97,10 @@
         - [Offline algorithms](offline_algorithms.md)
     - [Paths and circuits](path_and_circuit.md)
         - [Eulerian paths](eulerian_paths.md)
-<!--         - [Hamiltonian paths](README.md) -->
-<!--         - [De Bruijn sequences](README.md) -->
-<!--         - [Knight’s tours](README.md) -->
-<!--     - [Flows and cuts](README.md) -->
+        - [Hamiltonian paths](hamiltonian_path.md)
+        - [De Bruijn sequences](de_bruijn_sequences.md)
+        - [Knight’s tours](knight_s_tour.md)
+    <!-- - [Flows and cuts](README.md) -->
 <!--         - [Ford–Fulkerson algorithm](README.md) -->
 <!--         - [Disjoint paths](README.md) -->
 <!--         - [Maximum matchings](README.md) -->
