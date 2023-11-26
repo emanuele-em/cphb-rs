@@ -102,9 +102,9 @@
         - [Knight’s tours](knight_s_tour.md)
     - [Flows and cuts](flows_and_cuts.md)
         - [Ford–Fulkerson algorithm](ford_fulkerson_algorithm.md)
-<!--         - [Disjoint paths](README.md) -->
-<!--         - [Maximum matchings](README.md) -->
-<!--         - [Path covers](README.md) -->
+        - [Disjoint paths](disjoint_path.md)
+        - [Maximum matchings](maximum_matching.md)
+        - [Path covers](path_covers.md)
 <!-- - [Advanced topics](README.md) -->
 <!--     - [Number theory](README.md) -->
 <!--         - [Primes and factors](README.md) -->
