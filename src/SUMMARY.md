@@ -105,9 +105,9 @@
         - [Disjoint paths](disjoint_path.md)
         - [Maximum matchings](maximum_matching.md)
         - [Path covers](path_covers.md)
-<!-- - [Advanced topics](README.md) -->
-<!--     - [Number theory](README.md) -->
-<!--         - [Primes and factors](README.md) -->
+- [Advanced topics](advanced_topics.md)
+    - [Number theory](number_theory.md)
+        - [Primes and factors](prime_factors.md)
 <!--         - [Modular arithmetic](README.md) -->
 <!--         - [Solving equations](README.md) -->
 <!--         - [Other results](README.md) -->
