@@ -108,7 +108,7 @@
 - [Advanced topics](advanced_topics.md)
     - [Number theory](number_theory.md)
         - [Primes and factors](prime_factors.md)
-<!--         - [Modular arithmetic](README.md) -->
+        - [Modular arithmetic](modular_arithmetic.md)
 <!--         - [Solving equations](README.md) -->
 <!--         - [Other results](README.md) -->
 <!--     - [Combinatorics](README.md) -->
