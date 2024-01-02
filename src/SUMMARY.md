@@ -109,8 +109,8 @@
     - [Number theory](number_theory.md)
         - [Primes and factors](prime_factors.md)
         - [Modular arithmetic](modular_arithmetic.md)
-<!--         - [Solving equations](README.md) -->
-<!--         - [Other results](README.md) -->
+        - [Solving equations](solving_equations.md)
+        - [Other results](other_results.md)
 <!--     - [Combinatorics](README.md) -->
 <!--         - [Binomial coefficients](README.md) -->
 <!--         - [Catalan numbers](README.md) -->
