@@ -61,7 +61,6 @@ X =
  \\end{bmatrix}.
 \\]
 
-\noindent
 For example,
 \\[
 \\begin{bmatrix}

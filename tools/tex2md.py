@@ -88,6 +88,50 @@ def join_operator_lines(s):
     return "\n".join(out)
 
 
+ALIGN = {"r": "---:", "l": ":---", "c": ":---:"}
+
+
+def convert_tabular(text):
+    """Turn \\begin{tabular} blocks into GitHub-flavoured Markdown tables."""
+
+    def one(match):
+        spec, body = match.group(1), match.group(2)
+        # The book also uses tabular purely to sit figures side by side. A
+        # GFM cell is single-line and cannot hold a <script> block, so drop
+        # the scaffolding and let the figures stack instead.
+        if "<script" in body or "\\begin{tikzpicture}" in body:
+            body = body.replace("\\hline", "")
+            parts = [c.strip() for c in re.split(r"&|\\\\", body) if c.strip()]
+            return "\n\n" + "\n\n".join(parts) + "\n\n"
+        cols = [ALIGN.get(c, ":---") for c in spec if c in ALIGN]
+        rows, rule_after = [], None
+        for raw in body.split("\\\\"):
+            if "\\hline" in raw:
+                # remember where the rule fell, then drop it
+                rule_after = len(rows)
+                raw = raw.replace("\\hline", "")
+            cells = [c.strip() for c in raw.split("&")]
+            if any(cells):
+                rows.append(cells)
+        if not rows:
+            return ""
+        if not cols:
+            cols = [":---"] * len(rows[0])
+        # a rule straight after the first row marks it as a header;
+        # otherwise the table has none and GFM still requires one
+        if rule_after == 1:
+            head, body_rows = rows[0], rows[1:]
+        else:
+            head, body_rows = [""] * len(cols), rows
+        out = ["| " + " | ".join(head) + " |",
+               "| " + " | ".join(cols) + " |"]
+        out += ["| " + " | ".join(r) + " |" for r in body_rows]
+        return "\n" + "\n".join(out) + "\n"
+
+    return re.sub(r"\\begin\{tabular\}\{([^}]*)\}(.*?)\\end\{tabular\}",
+                  one, text, flags=re.S)
+
+
 def double_all(s):
     """Double every backslash (display-math convention used by ch21)."""
     return s.replace("\\", "\\\\")
@@ -185,6 +229,9 @@ def convert_prose(text, cites, footnotes):
         nums = [str(cites[k.strip()]) for k in arg.split(",") if k.strip() in cites]
         return "[" + ", ".join(nums) + "]" if nums else ""
     text = replace_cmd(text, "cite", cite)
+
+    text = convert_tabular(text)
+    text = re.sub(r"(?m)^\\noindent\s*$\n?", "", text)
 
     for env in ("center", "multicols", "itemize", "enumerate",
                 "samepage", "sloppypar", "figure", "table"):

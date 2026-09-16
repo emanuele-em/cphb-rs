@@ -140,16 +140,16 @@
         - [Combining algorithms](combining_algorithms.md)
         - [Integer partitions](integer_partitions.md)
         - [Mo’s algorithm](mos_algorithm.md)
+    - [Geometry](geometry.md)
+        - [Complex numbers](complex_numbers.md)
+        - [Points and lines](points_and_lines.md)
+        - [Polygon area](polygon_area.md)
+        - [Distance functions](distance_functions.md)
 <!--     - [Segment trees revisited](README.md) -->
 <!--         - [Lazy propagation](README.md) -->
 <!--         - [Dynamic trees](README.md) -->
 <!--         - [Data structures](README.md) -->
 <!--         - [Two-dimensionality](README.md) -->
-<!--     - [Geometry](README.md) -->
-<!--         - [Complex numbers](README.md) -->
-<!--         - [Points and lines](README.md) -->
-<!--         - [Polygon area](README.md) -->
-<!--         - [Distance functions](README.md) -->
 <!--     - [Sweep line algorithms](README.md) -->
 <!--         - [Intersection points](README.md) -->
 <!--         - [Closest pair problem](README.md) -->

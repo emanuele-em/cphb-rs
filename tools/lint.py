@@ -21,7 +21,8 @@ VALID_FENCES = {
 
 # LaTeX macros that must never survive into prose.
 PROSE_MACROS = re.compile(r"\\(?:key|emph|texttt|textbf|textit|footnote|index|"
-                          r"section|subsection|chapter|item|lstinline)\b")
+                          r"section|subsection|chapter|item|lstinline|noindent|"
+                          r"hline|begin\{tabular\}|end\{tabular\})")
 
 # CommonMark eats a backslash before ASCII punctuation, so `\{` reaches
 # MathJax as a bare `{` and the braces vanish. Inside math such a backslash

@@ -107,7 +107,6 @@ Catalan numbers are also related to trees:
 - there are $C_n$ binary trees of $n$ nodes
 - there are $C_{n-1}$ rooted trees of $n$ nodes
 
-\noindent
 For example, for $C_3=5$, the binary trees are
 
 <script type="text/tikz">

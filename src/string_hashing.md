@@ -213,16 +213,16 @@ The probability of one or more collisions is
 The following table shows the collision probabilities
 when $n=10^6$ and the value of $B$ varies:
 
-\begin{tabular}{rrrr}
-constant $B$ & scenario 1 & scenario 2 & scenario 3 \\
-\hline
-$10^3$ & $0.001000$ & $1.000000$ & $1.000000$ \\
-$10^6$ & $0.000001$ & $0.632121$ & $1.000000$ \\
-$10^9$ & $0.000000$ & $0.001000$ & $1.000000$ \\
-$10^{12}$ & $0.000000$ & $0.000000$ & $0.393469$ \\
-$10^{15}$ & $0.000000$ & $0.000000$ & $0.000500$ \\
-$10^{18}$ & $0.000000$ & $0.000000$ & $0.000001$ \\
-\end{tabular}
+
+| constant $B$ | scenario 1 | scenario 2 | scenario 3 |
+| ---: | ---: | ---: | ---: |
+| $10^3$ | $0.001000$ | $1.000000$ | $1.000000$ |
+| $10^6$ | $0.000001$ | $0.632121$ | $1.000000$ |
+| $10^9$ | $0.000000$ | $0.001000$ | $1.000000$ |
+| $10^{12}$ | $0.000000$ | $0.000000$ | $0.393469$ |
+| $10^{15}$ | $0.000000$ | $0.000000$ | $0.000500$ |
+| $10^{18}$ | $0.000000$ | $0.000000$ | $0.000001$ |
+
 
 The table shows that in scenario 1,
 the probability of a collision is negligible

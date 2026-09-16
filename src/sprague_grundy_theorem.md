@@ -229,7 +229,8 @@ In this game, on each turn, the player chooses one
 of the mazes and then moves the figure in the maze.
 Assume that the initial state of the game is as follows:
 
-\begin{tabular}{ccc}
+
+
 <script type="text/tikz">
 \begin{tikzpicture}[scale=.55]
   \begin{scope}
@@ -246,7 +247,7 @@ Assume that the initial state of the game is as follows:
     \end{scope}
 \end{tikzpicture}
 </script>
-&
+
 <script type="text/tikz">
 \begin{tikzpicture}[scale=.55]
   \begin{scope}
@@ -261,7 +262,7 @@ Assume that the initial state of the game is as follows:
   \end{scope}
 \end{tikzpicture}
 </script>
-&
+
 <script type="text/tikz">
 \begin{tikzpicture}[scale=.55]
   \begin{scope}
@@ -273,11 +274,13 @@ Assume that the initial state of the game is as follows:
   \end{scope}
 \end{tikzpicture}
 </script>
-\end{tabular}
+
+
 
 The Grundy numbers for the mazes are as follows:
 
-\begin{tabular}{ccc}
+
+
 <script type="text/tikz">
 \begin{tikzpicture}[scale=.55]
   \begin{scope}
@@ -321,7 +324,7 @@ The Grundy numbers for the mazes are as follows:
     \end{scope}
 \end{tikzpicture}
 </script>
-&
+
 <script type="text/tikz">
 \begin{tikzpicture}[scale=.55]
   \begin{scope}
@@ -363,7 +366,7 @@ The Grundy numbers for the mazes are as follows:
   \end{scope}
 \end{tikzpicture}
 </script>
-&
+
 <script type="text/tikz">
 \begin{tikzpicture}[scale=.55]
   \begin{scope}
@@ -403,7 +406,8 @@ The Grundy numbers for the mazes are as follows:
   \end{scope}
 \end{tikzpicture}
 </script>
-\end{tabular}
+
+
 
 In the initial state, the nim sum of the Grundy numbers
 is $2 \oplus 3 \oplus 3 = 2$, so

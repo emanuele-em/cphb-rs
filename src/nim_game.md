@@ -68,26 +68,28 @@ Next we will find out such a move.
 
 The nim sum of the state is as follows:
 
-\begin{tabular}{r|r}
-10 & `1010` \\
-12 & `1100` \\
-5 & `0101` \\
-\hline
-3 & `0011` \\
-\end{tabular}
+
+|  |  |
+| ---: | ---: |
+| 10 | `1010` |
+| 12 | `1100` |
+| 5 | `0101` |
+| 3 | `0011` |
+
 
 In this case, the heap with 10 sticks
 is the only heap that has a one bit
 at the position of the leftmost
 one bit of the nim sum:
 
-\begin{tabular}{r|r}
-10 & `10\underline{1}0` \\
-12 & `1100` \\
-5 & `0101` \\
-\hline
-3 & `00\underline{1}1` \\
-\end{tabular}
+
+|  |  |
+| ---: | ---: |
+| 10 | `10\underline{1}0` |
+| 12 | `1100` |
+| 5 | `0101` |
+| 3 | `00\underline{1}1` |
+
 
 The new size of the heap has to be
 $10 \oplus 3 = 9$,
@@ -95,13 +97,14 @@ so we will remove just one stick.
 After this, the state will be $[9,12,5]$,
 which is a losing state:
 
-\begin{tabular}{r|r}
-9 & `1001` \\
-12 & `1100` \\
-5 & `0101` \\
-\hline
-0 & `0000` \\
-\end{tabular}
+
+|  |  |
+| ---: | ---: |
+| 9 | `1001` |
+| 12 | `1100` |
+| 5 | `0101` |
+| 0 | `0000` |
+
 
 ## Misère game
 
