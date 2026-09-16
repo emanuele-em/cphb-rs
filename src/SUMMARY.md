@@ -10,7 +10,7 @@
         - [Shortening code](shortening_code.md)
         - [Mathematics](mathematics.md)
         - [Contests and resources](contests_and_resources.md)
-    - [Time complexity](calculation_rules.md)
+    - [Time complexity](time_complexity.md)
         - [Calculation rules](calculation_rules.md)
         - [Complexity classes](complexity_classes.md)
         - [Estimating efficiency](estimating_efficiency.md)

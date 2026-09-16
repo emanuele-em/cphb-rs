@@ -17,7 +17,7 @@ The following list contains common time complexities of algorithms:
 An algorithm is **polynomial** if its time complexity is at most $O(n^k)$ where $k$ is a constant.  All the above time complexities except $O(2^n)$ and $O(n!)$ are polynomial.  In practice, the constant $k$ is usually small, and therefore a polynomial time complexity roughly means that the algorithm is _efficient_.
 
 Most algorithms in this book are polynomial.  Still, there are many important problems for which
-no polynomial algorithm is known, i.e., nobody knows how to solve them efficiently.  \key{NP-hard} problems are an important set of problems, for which no polynomial algorithm is known[^1].
+no polynomial algorithm is known, i.e., nobody knows how to solve them efficiently.  **NP-hard** problems are an important set of problems, for which no polynomial algorithm is known[^1].
 
 ___
 
