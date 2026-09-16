@@ -38,7 +38,7 @@ The problem can be solved using dynamic programming
 by going through the grid row by row.
 Each row in a solution can be represented as a
 string that contains $m$ characters from the set
-$\{\sqcap, \sqcup, \sqsubset, \sqsupset \}$.
+$\\{\sqcap, \sqcup, \sqsubset, \sqsupset \\}$.
 For example, the above solution consists of four rows
 that correspond to the following strings:
 

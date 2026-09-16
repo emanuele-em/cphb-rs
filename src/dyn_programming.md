@@ -201,10 +201,10 @@ For example, in the above scenario
 \\hspace{10px} \\texttt{last}(\\{1,3,4\\})=5
 \\]
 
-because the optimal rides are $\{1,4\}$ and $\{3\}$,
+because the optimal rides are $\\{1,4\\}$ and $\\{3\\}$,
 and the second ride has weight 5.
 Of course, our final goal is to calculate the value
-of $\texttt{rides}(\{0 \ldots n-1\})$.
+of $\texttt{rides}(\\{0 \ldots n-1\\})$.
 
 We can calculate the values
 of the functions recursively and then apply
@@ -275,7 +275,7 @@ correct order.
 ## Counting subsets
 
 Our last problem in this chapter is as follows:
-Let $X=\{0 \ldots n-1\}$, and each subset $S \subset X$
+Let $X=\\{0 \ldots n-1\\}$, and each subset $S \subset X$
 is assigned an integer \\(\\texttt{value}[S]\\).
 Our task is to calculate for each $S$
 \\[

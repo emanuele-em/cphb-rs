@@ -63,7 +63,7 @@ because $28=1+2+4+7+14$.
 It is easy to show that there is an infinite number
 of primes.
 If the number of primes would be finite,
-we could construct a set $P=\{p_1,p_2,\ldots,p_n\}$
+we could construct a set $P=\\{p_1,p_2,\ldots,p_n\\}$
 that would contain all the primes.
 For example, $p_1=2$, $p_2=3$, $p_3=5$, and so on.
 However, using $P$, we could form a new prime
@@ -99,7 +99,7 @@ but nobody has been able to prove them.
 For example, the following conjectures are famous:
 
 - **Goldbach's conjecture**: Each even integer $n>2$ can be represented as a sum $n=a+b$ so that both $a$ and $b$ are primes.
-- **Twin prime conjecture**: There is an infinite number of pairs of the form $\{p,p+2\}$, where both $p$ and $p+2$ are primes.
+- **Twin prime conjecture**: There is an infinite number of pairs of the form $\\{p,p+2\\}$, where both $p$ and $p+2$ are primes.
 - **Legendre's conjecture**: There is always a prime between numbers $n^2$ and $(n+1)^2$, where $n$ is any positive integer.
 
 ## Basic algorithms

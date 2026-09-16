@@ -171,7 +171,7 @@ that contains all left nodes exists
 exactly when for each $X$, the condition $|X| \le |f(X)|$ holds.
 
 Let us study Hall's theorem in the example graph.
-First, let $X=\{1,3\}$ which yields $f(X)=\{5,6,8\}$:
+First, let $X=\\{1,3\\}$ which yields $f(X)=\\{5,6,8\\}$:
 
 <script type="text/tikz">
 \begin{tikzpicture}[scale=0.60]
@@ -195,7 +195,7 @@ First, let $X=\{1,3\}$ which yields $f(X)=\{5,6,8\}$:
 
 The condition of Hall's theorem holds, because
 $|X|=2$ and $|f(X)|=3$.
-Next, let $X=\{2,4\}$ which yields $f(X)=\{7\}$:
+Next, let $X=\\{2,4\\}$ which yields $f(X)=\\{7\\}$:
 
 <script type="text/tikz">
 \begin{tikzpicture}[scale=0.60]

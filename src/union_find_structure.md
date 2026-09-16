@@ -16,7 +16,7 @@ is the representative of the set,
 and there is a chain from any other element of the
 set to the representative.
 For example, assume that the sets are
-$\{1,4,7\}$, $\{5\}$ and $\{2,3,6,8\}$:
+$\\{1,4,7\\}$, $\\{5\\}$ and $\\{2,3,6,8\\}$:
 
 <script type="text/tikz">
 \begin{tikzpicture}

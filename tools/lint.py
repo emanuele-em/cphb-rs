@@ -23,6 +23,16 @@ VALID_FENCES = {
 PROSE_MACROS = re.compile(r"\\(?:key|emph|texttt|textbf|textit|footnote|index|"
                           r"section|subsection|chapter|item|lstinline)\b")
 
+# CommonMark eats a backslash before ASCII punctuation, so `\{` reaches
+# MathJax as a bare `{` and the braces vanish. Inside math such a backslash
+# must be doubled. A backslash before a letter (\sum, \texttt) is untouched
+# by Markdown and is correct either way.
+# An odd-length run of backslashes before punctuation loses one to Markdown;
+# an even-length run survives as half its length, which is what we want.
+PUNCT = set("!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~")
+ESCAPE = re.compile(r"(\\+)([^A-Za-z\s\\])")
+INLINE_MATH = re.compile(r"(?<!\$)\$([^$\n]+)\$(?!\$)")
+
 TIKZ_OPEN = re.compile(r'<script\s+type="text/tikz">')
 TIKZ_CLOSE = re.compile(r"</script>")
 
@@ -99,6 +109,15 @@ def lint_file(path):
             if "\\\\]" in line or re.search(r"\\+end\{(equation\*?|align\*?|gather\*?)\}", line):
                 in_display = False
             continue  # macros inside display math are MathJax's problem, not ours
+
+        # --- backslash-before-punctuation inside inline math ----------------
+        for span in INLINE_MATH.finditer(line):
+            for esc in ESCAPE.finditer(span.group(1)):
+                run, char = esc.group(1), esc.group(2)
+                if len(run) % 2 == 1 and char in PUNCT:
+                    problems.append((n, "escape",
+                                     f"`{run}{char}` in inline math: Markdown eats the "
+                                     "backslash, so MathJax never sees it (double it)"))
 
         # --- stray LaTeX in prose ------------------------------------------
         if stripped.startswith("%"):
