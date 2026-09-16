@@ -99,10 +99,38 @@ def convert_tabular(text):
         # The book also uses tabular purely to sit figures side by side. A
         # GFM cell is single-line and cannot hold a <script> block, so drop
         # the scaffolding and let the figures stack instead.
-        if "<script" in body or "\\begin{tikzpicture}" in body:
+        # Note the sentinel test: during a normal run the pictures have
+        # already been masked, so the body holds "\x00T<n>\x00", not markup.
+        if "<script" in body or "\x00T" in body or "\\begin{tikzpicture}" in body:
             body = body.replace("\\hline", "")
-            parts = [c.strip() for c in re.split(r"&|\\\\", body) if c.strip()]
-            return "\n\n" + "\n\n".join(parts) + "\n\n"
+            def blank(cell):
+                # spacer cells carry no content: \hspace{..}, \quad, \, ...
+                c = re.sub(r"\\(?:hspace|vspace)\{[^}]*\}|\\q?quad|\\[,;:!]", "", cell)
+                return not c.strip()
+
+            rows = [[c.strip() for c in r.split("&")] for r in body.split("\\\\")]
+            rows = [[c for c in r if not blank(c)] for r in rows]
+            rows = [r for r in rows if r]
+
+            def has_figure(row):
+                return any("\x00T" in c or "<script" in c for c in row)
+
+            out, i = [], 0
+            while i < len(rows):
+                row = rows[i]
+                # a row of figures is often captioned by the step numbers on
+                # the row below; pair them so the labels survive stacking
+                if (has_figure(row) and i + 1 < len(rows)
+                        and not has_figure(rows[i + 1])
+                        and len(rows[i + 1]) == len(row)):
+                    for fig, label in zip(row, rows[i + 1]):
+                        out.append(fig)
+                        out.append(f"_{label}_")
+                    i += 2
+                else:
+                    out.extend(row)
+                    i += 1
+            return "\n\n" + "\n\n".join(out) + "\n\n"
         cols = [ALIGN.get(c, ":---") for c in spec if c in ALIGN]
         rows, rule_after = [], None
         for raw in body.split("\\\\"):
@@ -238,6 +266,8 @@ def convert_prose(text, cites, footnotes):
         # also swallow optional arguments: \begin{itemize}[noitemsep]
         text = re.sub(r"\\begin\{" + env + r"\}(\[[^\]]*\])?(\{[^}]*\})?", "", text)
         text = re.sub(r"\\end\{" + env + r"\}", "", text)
+    # \item, optionally carrying its own label: \item[(1)] keeps the "(1)"
+    text = re.sub(r"(?m)^\s*\\item\[([^\]]*)\]\s*", r"- \1 ", text)
     text = re.sub(r"(?m)^\s*\\item\s+", "- ", text)
 
     text = text.replace("---", "\u2014").replace("--", "\u2013")

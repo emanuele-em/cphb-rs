@@ -145,12 +145,12 @@
         - [Points and lines](points_and_lines.md)
         - [Polygon area](polygon_area.md)
         - [Distance functions](distance_functions.md)
+    - [Sweep line algorithms](sweep_line_algorithms.md)
+        - [Intersection points](intersection_points.md)
+        - [Closest pair problem](closest_pair_problem.md)
+        - [Convex hull problem](convex_hull_problem.md)
 <!--     - [Segment trees revisited](README.md) -->
 <!--         - [Lazy propagation](README.md) -->
 <!--         - [Dynamic trees](README.md) -->
 <!--         - [Data structures](README.md) -->
 <!--         - [Two-dimensionality](README.md) -->
-<!--     - [Sweep line algorithms](README.md) -->
-<!--         - [Intersection points](README.md) -->
-<!--         - [Closest pair problem](README.md) -->
-<!--         - [Convex hull problem](README.md) -->
