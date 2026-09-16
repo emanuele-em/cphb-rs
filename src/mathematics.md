@@ -79,7 +79,7 @@ $$
 
 ### Harmonic sum
 
-A \key{harmonic sum} is a sum of the form
+A **harmonic sum** is a sum of the form
 $$
 \sum_{x=1}^n \frac{1}{x} = 1+\frac{1}{2}+\frac{1}{3}+\ldots+\frac{1}{n}
 $$
@@ -107,12 +107,12 @@ $$
 4 \in X \hspace{10px}\textrm{and}\hspace{10px} 5 \notin X
 $$
 New sets can be constructed using set operations:
-- The \key{intersection} $A \cap B$ consists of elements that are in both $A$ and $B$. For example, if $A=\{1,2,5\}$ and $B=\{2,4\}$, then $A \cap B = \{2\}$.
-- The \key{union} $A \cup B$ consists of elements that are in $A$ or $B$ or both. For example, if $A=\{3,7\}$ and $B=\{2,3,8\}$, then $A \cup B = \{2,3,7,8\}$.
-- The \key{complement} $\bar A$ consists of elements that are not in $A$. The interpretation of a complement depends on the \key{universal set}, which contains all possible elements. For example, if $A=\{1,2,5,7\}$ and the universal set is $\{1,2,\ldots,10\}$, then $\bar A = \{3,4,6,8,9,10\}$.
-- The \key{difference} $A \setminus B = A \cap \bar B$ consists of elements that are in $A$ but not in $B$. Note that $B$ can contain elements that are not in $A$. For example, if $A=\{2,3,7,8\}$ and $B=\{3,5,8\}$, then $A \setminus B = \{2,7\}$.
+- The **intersection** $A \cap B$ consists of elements that are in both $A$ and $B$. For example, if $A=\{1,2,5\}$ and $B=\{2,4\}$, then $A \cap B = \{2\}$.
+- The **union** $A \cup B$ consists of elements that are in $A$ or $B$ or both. For example, if $A=\{3,7\}$ and $B=\{2,3,8\}$, then $A \cup B = \{2,3,7,8\}$.
+- The **complement** $\bar A$ consists of elements that are not in $A$. The interpretation of a complement depends on the **universal set**, which contains all possible elements. For example, if $A=\{1,2,5,7\}$ and the universal set is $\{1,2,\ldots,10\}$, then $\bar A = \{3,4,6,8,9,10\}$.
+- The **difference** $A \setminus B = A \cap \bar B$ consists of elements that are in $A$ but not in $B$. Note that $B$ can contain elements that are not in $A$. For example, if $A=\{2,3,7,8\}$ and $B=\{3,5,8\}$, then $A \setminus B = \{2,7\}$.
 
-If each element of $A$ also belongs to $S$, we say that $A$ is a \key{subset} of $S$, denoted by $A \subset S$.
+If each element of $A$ also belongs to $S$, we say that $A$ is a **subset** of $S$, denoted by $A \subset S$.
 A set $S$ always has $2^{|S|}$ subsets, including the empty set.
 For example, the subsets of the set $\{2,4,7\}$ are
 $$
@@ -138,7 +138,7 @@ contains all even integers.
 
 ## Logic
 The value of a logical expression is either **true** (1) or **false** (0).
-The most important logical operators are $\lnot$ (\key{negation}), $\land$ (\key{conjunction}), $\lor$ (\key{disjunction}), $\Rightarrow$ (\key{implication}) and $\Leftrightarrow$ (\key{equivalence}).
+The most important logical operators are $\lnot$ (**negation**), $\land$ (**conjunction**), $\lor$ (**disjunction**), $\Rightarrow$ (**implication**) and $\Leftrightarrow$ (**equivalence**).
 The following table shows the meanings of these operators:
 
 | $A$ | $B$ | $\lnot A$ | $\lnot B$ | $A \land B$ | $A \lor B$ | $A \Rightarrow B$ | $A \Leftrightarrow B$ |
@@ -163,7 +163,7 @@ Using this definition, $P(7)$ is true but $P(8)$ is false.
 ### Quantifier
 
 A **quantifier** connects a logical expression to the elements of a set.
-The most important quantifiers are $\forall$ (\key{for all}) and $\exists$ (\key{there is}).
+The most important quantifiers are $\forall$ (**for all**) and $\exists$ (**there is**).
 For example,
 $$
 \forall x (\exists y (y < x))
@@ -197,7 +197,7 @@ $$
 
 ### Factorial
 
-The \key{factorial} $n!$ can be defined
+The **factorial** $n!$ can be defined
 $$
 \prod_{x=1}^n x = 1 \cdot 2 \cdot 3 \cdot \ldots \cdot n
 $$
@@ -232,7 +232,7 @@ $$
 
 ## Logarithms
 
-The \key{logarithm} of a number $x$ is denoted $\log_k(x)$, where $k$ is the base of the logarithm.
+The **logarithm** of a number $x$ is denoted $\log_k(x)$, where $k$ is the base of the logarithm.
 According to the definition, $\log_k(x)=a$ exactly when $k^a=x$.
 
 A useful property of logarithms is that $\log_k(x)$ equals the number of times we have to divide $x$ by $k$ before we reach the number 1.

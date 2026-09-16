@@ -327,7 +327,7 @@ For example,
 
 ## Euler's totient function
 
-Numbers $a$ and $b$ are \key{coprime}
+Numbers $a$ and $b$ are **coprime**
 if $\textrm{gcd}(a,b)=1$.
 **Euler's totient function** $\varphi(n)$
 %\footnote{Euler presented this function in 1763.}

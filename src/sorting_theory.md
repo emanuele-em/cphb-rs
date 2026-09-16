@@ -259,7 +259,7 @@ The lower bound $n \log n$ does not apply to
 algorithms that do not compare array elements
 but use some other information.
 An example of such an algorithm is
-\key{counting sort} that sorts an array in
+**counting sort** that sorts an array in
 $O(n)$ time assuming that every element in the array
 is an integer between $0 \ldots c$ and $c=O(n)$.
 

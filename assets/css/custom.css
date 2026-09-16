@@ -1,8 +1,14 @@
-svg{
+svg:has(> g.graph){
     margin:auto;
     display: block;
 }
 
-polygon{
+svg > g.graph > polygon{
     fill: transparent;
+}
+
+/* TikZJax's SVG page must not inherit mdBook's .page layout offsets. */
+main .page:has(> svg) {
+    margin: 0;
+    padding: 0;
 }
