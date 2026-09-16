@@ -295,7 +295,7 @@ The algorithm is based on the following formula:
 \\[
     \\textrm{gcd}(a,b) = \\begin{cases}
                a        & b = 0\\\\
-               \\textrm{gcd}(b,a \\bmod b) & b \\neq 0\\
+               \\textrm{gcd}(b,a \\bmod b) & b \\neq 0\\\\
            \\end{cases}
 \\]
 
@@ -329,8 +329,7 @@ For example,
 
 Numbers $a$ and $b$ are **coprime**
 if $\textrm{gcd}(a,b)=1$.
-**Euler's totient function** $\varphi(n)$
-%\footnote{Euler presented this function in 1763.}
+**Euler's totient function** $\varphi(n)$[^2]
 gives the number of coprime numbers to $n$
 between $1$ and $n$.
 For example, $\varphi(12)=4$,
@@ -349,4 +348,6 @@ For example, $\varphi(12)=2^1 \cdot (2-1) \cdot 3^0 \cdot (3-1)=4$.
 Note that $\varphi(n)=n-1$ if $n$ is prime.
 
 ___
-[^1] Euclid was a Greek mathematician who lived in about 300 BC. This is perhaps the first known algorithm in history.
+[^1]: Euclid was a Greek mathematician who lived in about 300 BC. This is perhaps the first known algorithm in history.
+
+[^2]: Euler presented this function in 1763.

@@ -39,6 +39,8 @@ jobs:
           sudo apt-get install --yes graphviz
           cargo install --locked --version "${MDBOOK_VERSION}" mdbook
           cargo install --locked --version "${MDBOOK_GRAPHVIZ_VERSION}" mdbook-graphviz
+      - name: Lint sources
+        run: python3 tools/lint.py src
       - name: Test Rust code blocks
         run: mdbook test
       - name: Setup Pages

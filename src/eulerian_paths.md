@@ -103,7 +103,7 @@ First, an undirected graph has an Eulerian path
 exactly when all the edges
 belong to the same connected component and
 
-- the degree of each node is even \emph{or}
+- the degree of each node is even _or_
 - the degree of exactly two nodes is odd,
 and the degree of all other nodes is even.
 
@@ -379,5 +379,5 @@ so we have successfully constructed an Eulerian circuit.
 
 ___
 
-[^1] L. Euler studied such paths in 1736 when he solved the famous Königsberg bridge problem.  This was the birth of graph theory.
-[^2] The algorithm was published in 1873 after Hierholzer's death [35].
+[^1]: L. Euler studied such paths in 1736 when he solved the famous Königsberg bridge problem.  This was the birth of graph theory.
+[^2]: The algorithm was published in 1873 after Hierholzer's death [35].

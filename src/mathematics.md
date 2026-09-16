@@ -271,7 +271,7 @@ For example, the representation of $123$ in base $2$ is $1111011$ and $\lfloor \
 
 ___
 
-[^1] There is even a general formula for such sums, called Faulhaber’s formula, but it is too
+[^1]: There is even a general formula for such sums, called Faulhaber’s formula, but it is too
 complex to be presented here.
 
-[^2] Fibonacci (c. 1175--1250) was an Italian mathematician.
+[^2]: Fibonacci (c. 1175--1250) was an Italian mathematician.

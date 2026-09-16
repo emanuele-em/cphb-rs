@@ -8,7 +8,7 @@ The standard rust macros used for output are `println!()` and `print!()` but the
 - `out!()` to print an inline output
 
 The input for the program usually consists of numbers and strings separated by spaces or newlines. They can be read into the `solve()` function as follows:
-```rust, ignore, ignore
+```rust, ignore
 fn solve(input: &mut Input, _test_case: usize) {
     let len_a = input.read::<usize>();
     let mut a = input.read_vec::<usize>(len_a);

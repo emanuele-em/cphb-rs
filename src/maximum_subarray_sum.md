@@ -140,6 +140,6 @@ Only Algorithm 3 is able to process even the largest inputs instantly.
 
 ___
 
-[^1] J. Bentley's book _Programming Pearls_ [8] made the problem popular.
+[^1]: J. Bentley's book _Programming Pearls_ [8] made the problem popular.
 
-[^2] In [8], this linear-time algorithm is attributed to J. B. Kadane, and the algorithm is sometimes called **Kadane’s algorithm**.
+[^2]: In [8], this linear-time algorithm is attributed to J. B. Kadane, and the algorithm is sometimes called **Kadane’s algorithm**.

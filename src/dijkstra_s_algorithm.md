@@ -1,6 +1,6 @@
 # Dijkstra’s algorithm
 
-**Dijkstra's algorithm**
+**Dijkstra's algorithm**[^1]
 finds shortest
 paths from the starting node to all nodes of the graph,
 like the Bellman–Ford algorithm.
@@ -277,4 +277,4 @@ at most one distance to the priority queue.
 
 ___
 
-[^1] E. W. Dijkstra published the algorithm in 1959 [14]; however, his original paper does not mention how to implement the algorithm efficiently.
+[^1]: E. W. Dijkstra published the algorithm in 1959 [14]; however, his original paper does not mention how to implement the algorithm efficiently.

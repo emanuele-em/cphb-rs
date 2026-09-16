@@ -78,7 +78,7 @@ corresponds to the string _AB_ or the string _C_.
 
 ## Huffman coding
 
-**Huffman coding** is a greedy algorithm
+**Huffman coding**[^1] is a greedy algorithm
 that constructs an optimal code for
 compressing a given string.
 The algorithm builds a binary tree
@@ -221,5 +221,5 @@ The following codewords can be read from the tree:
 
 ___
 
-[^1] D. A. Huffman discovered this method when solving a university course assignment and published the algorithm in 1952 [40].
+[^1]: D. A. Huffman discovered this method when solving a university course assignment and published the algorithm in 1952 [40].
 

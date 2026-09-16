@@ -1,4 +1,4 @@
-#  Breadth-first search
+# Breadth-first search
 
 **Breadth-first search** (BFS) visits the nodes
 in increasing order of their distance

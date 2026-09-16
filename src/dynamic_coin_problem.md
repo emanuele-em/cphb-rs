@@ -348,7 +348,7 @@ If $x<0$, the value is 0, because there are no solutions.
 If $x=0$, the value is 1, because there is only one way
 to form an empty sum.
 Otherwise we calculate the sum of all values
-of the form $\texttt{solve}(x-c)$ where $c$ is in \texttt{coins}.
+of the form $\texttt{solve}(x-c)$ where $c$ is in `coins`.
 
 The following code constructs an array
 $\texttt{count}$ such that

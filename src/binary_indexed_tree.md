@@ -311,4 +311,4 @@ to the next position takes $O(1)$ time.
 
 __
 
-[^1] The binary indexed tree structure was presented by P. M. Fenwick in 1994 [21].
+[^1]: The binary indexed tree structure was presented by P. M. Fenwick in 1994 [21].

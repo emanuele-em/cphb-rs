@@ -296,4 +296,4 @@ Can you see how?
 
 ___
 
-[^1] For a long time, it was thought that solving the 3 SUM problem more efficiently than in $O(n^2)$ time would not be possible.  However, in 2014, it turned out [30] that this is not the case.
+[^1]: For a long time, it was thought that solving the 3 SUM problem more efficiently than in $O(n^2)$ time would not be possible.  However, in 2014, it turned out [30] that this is not the case.

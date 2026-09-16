@@ -10,7 +10,7 @@ This should take at least some tens of seconds, so the algorithm seems to be too
 On the other hand, given the input size, we can try to _guess_ the required time complexity of the algorithm that solves the problem.
 The following table contains some useful estimates assuming a time limit of one second.
 
-| input size | reuired time complexity |
+| input size | required time complexity |
 | --- | --- |
 | $n \le 10$ | $O(n!)$ |
 | $n \le 20$ | $O(2^n)$ |

@@ -1,4 +1,4 @@
-#  Representing sets
+# Representing sets
 
 Every subset of a set
 $\{0,1,2,\ldots,n-1\}$

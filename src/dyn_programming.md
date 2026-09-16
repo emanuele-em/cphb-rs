@@ -1,4 +1,4 @@
-#  Dynamic programming
+# Dynamic programming
 
 Bit operations provide an efficient and convenient
 way to implement dynamic programming algorithms
@@ -342,7 +342,7 @@ Then, in the general case we can use the following recurrence:
 \\[
 \\begin{equation*}
     \\texttt{partial}(S,k) = \\begin{cases}
-               \\texttt{partial}(S,k-1) & k \\notin S \\
+               \\texttt{partial}(S,k-1) & k \\notin S \\\\
                \\texttt{partial}(S,k-1) + \\texttt{partial}(S \\setminus \\{k\\},k-1) & k \\in S
            \\end{cases}
 \\end{equation*}
@@ -399,4 +399,4 @@ _sum_, which yields a very efficient implementation.
 
 ___
 
-[^1] This technique was introduced in 1962 by M. Held and R. M. Karp [34].
+[^1]: This technique was introduced in 1962 by M. Held and R. M. Karp [34].

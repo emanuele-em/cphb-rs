@@ -66,4 +66,4 @@ possible squares to which the knight can move (squares $a \ldots e$):
 
 ___
 
-[^1] This heuristic was proposed in Warnsdorf's book [69] in 1823. There are also polynomial algorithms for finding knight's tours [52], but they are more complicated.
+[^1]: This heuristic was proposed in Warnsdorf's book [69] in 1823. There are also polynomial algorithms for finding knight's tours [52], but they are more complicated.

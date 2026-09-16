@@ -91,4 +91,4 @@ programming algorithm that always gives the
 correct answer.
 ___
 
-[^1] However, it is possible to \emph{check} in polynomial time if the greedy algorithm presented in this chapter works for a given set of coins [53]
+[^1]: However, it is possible to _check_ in polynomial time if the greedy algorithm presented in this chapter works for a given set of coins [53]

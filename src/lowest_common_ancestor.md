@@ -117,7 +117,7 @@ nodes in $O(\log n)$ time.
 ## Method 2
 
 Another way to solve the problem is based on
-a tree traversal array\footnote{}.
+a tree traversal array[^1].
 Once again, the idea is to traverse the nodes
 using a depth-first search:
 
@@ -158,7 +158,7 @@ using a depth-first search:
 
 However, we use a different tree
 traversal array than before:
-we add each node to the array \emph{always}
+we add each node to the array _always_
 when the depth-first search walks through the node,
 and not only at the first visit.
 Hence, a node that has $k$ children appears $k+1$ times
@@ -360,4 +360,4 @@ $3+4-2\cdot2=3$.
 
 ___
 
-[^1] This lowest common ancestor algorithm was presented in [7].  This technique is sometimes called the **Euler tour technique** [66].
+[^1]: This lowest common ancestor algorithm was presented in [7].  This technique is sometimes called the **Euler tour technique** [66].

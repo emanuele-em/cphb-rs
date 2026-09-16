@@ -197,4 +197,4 @@ for solving the problem is known.
 
 ___
 
-[^1] The algorithm presented here was introduced in [4].  There is also another well-known linear-time algorithm [19] that is based on backtracking.
+[^1]: The algorithm presented here was introduced in [4].  There is also another well-known linear-time algorithm [19] that is based on backtracking.

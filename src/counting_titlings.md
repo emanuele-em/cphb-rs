@@ -57,7 +57,7 @@ only by the state of the previous row.
 A solution is valid if row $1$ does not contain
 the character $\sqcup$,
 row $n$ does not contain the character $\sqcap$,
-and all consecutive rows are \emph{compatible}.
+and all consecutive rows are _compatible_.
 For example, the rows
 $\sqcup \sqsubset \sqsupset \sqcup \sqcap \sqcap \sqcup$ and
 $\sqsubset \sqsupset \sqsubset \sqsupset \sqcup \sqcup \sqcap$ 
@@ -104,4 +104,4 @@ how to store the intermediate results accurately.
 
 ___
 
-[^1] Surprisingly, this formula was discovered in 1961 by two research teams [43, 67] that worked independently.
+[^1]: Surprisingly, this formula was discovered in 1961 by two research teams [43, 67] that worked independently.

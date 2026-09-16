@@ -21,4 +21,4 @@ no polynomial algorithm is known, i.e., nobody knows how to solve them efficient
 
 ___
 
-[^1] A classic book on the topic is M. R. Garey's and D. S. Johnson's _Computers and Intractability: A Guide to the Theory of NP-Completeness_ [28].
+[^1]: A classic book on the topic is M. R. Garey's and D. S. Johnson's _Computers and Intractability: A Guide to the Theory of NP-Completeness_ [28].

@@ -340,4 +340,4 @@ the lowest common ancestor of nodes 2 and 7 is 1:
 
 ___
 
-[^1] This algorithm was published by R. E. Tarjan in 1979 [65].
+[^1]: This algorithm was published by R. E. Tarjan in 1979 [65].

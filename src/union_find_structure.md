@@ -1,6 +1,6 @@
 # Union-find structure
 
-A **union-find structure** maintains
+A **union-find structure**[^1] maintains
 a collection of sets.
 The sets are disjoint, so no element
 belongs to more than one set.
@@ -87,7 +87,7 @@ The efficiency of the union-find structure depends on
 how the sets are joined.
 It turns out that we can follow a simple strategy:
 always connect the representative of the
-\emph{smaller} set to the representative of the \emph{larger} set
+_smaller_ set to the representative of the _larger_ set
 (or if the sets are of equal size,
 we can make an arbitrary choice).
 Using this strategy, the length of any chain
@@ -152,17 +152,25 @@ set to the larger set.
 #     while x != link[x] {x = link[x]}
 #     x
 # }
-# fn swap(a: usize, b: usize){
-# todo!();
-# }
 fn unite(mut a: usize, mut b: usize, link: &mut [usize], size: &mut [usize]) {
     a = find(a, link);
     b = find(b, link);
-    if size[a] < size[b] {swap(a,b)}
+    if size[a] < size[b] { std::mem::swap(&mut a, &mut b) }
     size[a] += size[b];
     link[b] = a;
 }
+# let mut link: Vec<usize> = (0..6).collect();
+# let mut size = vec![1usize; 6];
+# unite(1, 2, &mut link, &mut size);
+# unite(3, 4, &mut link, &mut size);
+# unite(1, 4, &mut link, &mut size);
+# println!("link: {link:?}");
+# println!("size: {size:?}");
 ```
+
+Note that `a` and `b` are swapped with `std::mem::swap`, which takes
+mutable references: a plain function taking the values by copy would
+leave the caller's bindings untouched.
 
 The time complexity of the function `find`
 is $O(\log n)$ assuming that the length of each
@@ -175,5 +183,5 @@ the smaller set to the larger set.
 
 ___
 
-[^1] The structure presented here was introduced in 1971 by J. D. Hopcroft and J. D. Ullman [38].
-Later, in 1975, R. E. Tarjan studied a more sophisticated variant of the structure [64] that is discussed in many algorithm textbooks nowadays.
+[^1]: The structure presented here was introduced in 1971 by J. D. Hopcroft and J. D. Ullman [38].
+    Later, in 1975, R. E. Tarjan studied a more sophisticated variant of the structure [64] that is discussed in many algorithm textbooks nowadays.

@@ -16,4 +16,4 @@ on the special properties of the graphs.
 
 ___
 
-[^1] Directed acyclic graphs are sometimes called DAGs
+[^1]: Directed acyclic graphs are sometimes called DAGs

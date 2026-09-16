@@ -1,4 +1,4 @@
-#  Bit representation
+# Bit representation
 
 In programming, an $n$ bit integer is internally
 stored as a binary number that consists of $n$ bits.

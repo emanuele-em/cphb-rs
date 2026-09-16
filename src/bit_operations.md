@@ -1,4 +1,4 @@
-#  Bit operations
+# Bit operations
 
 ## `and` operation
 

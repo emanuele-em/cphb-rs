@@ -1,6 +1,6 @@
 # Kruskal’s algorithm
 
-In **Kruskal's algorithm**, the initial spanning tree
+In **Kruskal's algorithm**[^1], the initial spanning tree
 only contains the nodes of the graph
 and does not contain any edges.
 Then the algorithm goes through the edges
@@ -258,4 +258,4 @@ will be $O(m \log n)$ after sorting the edge list.
 
 ___
 
-[^1] The algorithm was published in 1956 by J. B. Kruskal [48].
+[^1]: The algorithm was published in 1956 by J. B. Kruskal [48].

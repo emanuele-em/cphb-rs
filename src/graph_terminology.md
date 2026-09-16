@@ -1,4 +1,4 @@
-#  Graph terminology
+# Graph terminology
 
 A **graph** consists of **nodes**
 and **edges**. In this book,
