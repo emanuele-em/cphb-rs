@@ -140,6 +140,11 @@
         - [Combining algorithms](combining_algorithms.md)
         - [Integer partitions](integer_partitions.md)
         - [Mo’s algorithm](mos_algorithm.md)
+    - [Segment trees revisited](segment_trees_revisited.md)
+        - [Lazy propagation](lazy_propagation.md)
+        - [Dynamic trees](dynamic_trees.md)
+        - [Data structures](segment_tree_data_structures.md)
+        - [Two-dimensionality](two_dimensionality.md)
     - [Geometry](geometry.md)
         - [Complex numbers](complex_numbers.md)
         - [Points and lines](points_and_lines.md)
@@ -149,8 +154,3 @@
         - [Intersection points](intersection_points.md)
         - [Closest pair problem](closest_pair_problem.md)
         - [Convex hull problem](convex_hull_problem.md)
-<!--     - [Segment trees revisited](README.md) -->
-<!--         - [Lazy propagation](README.md) -->
-<!--         - [Dynamic trees](README.md) -->
-<!--         - [Data structures](README.md) -->
-<!--         - [Two-dimensionality](README.md) -->
