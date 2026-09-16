@@ -215,7 +215,7 @@ the length of the path
 $1 \rightarrow 2 \rightarrow 5$ is $12$,
 and the length of the path
 $1 \rightarrow 3 \rightarrow 4 \rightarrow 5$ is $11$.
-The latter path is the \key{shortest} path from node $1$ to node $5$.
+The latter path is the **shortest** path from node $1$ to node $5$.
 
 ## Neighbors and degrees
 
