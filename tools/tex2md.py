@@ -188,7 +188,8 @@ def convert_prose(text, cites, footnotes):
 
     for env in ("center", "multicols", "itemize", "enumerate",
                 "samepage", "sloppypar", "figure", "table"):
-        text = re.sub(r"\\begin\{" + env + r"\}(\{[^}]*\})?", "", text)
+        # also swallow optional arguments: \begin{itemize}[noitemsep]
+        text = re.sub(r"\\begin\{" + env + r"\}(\[[^\]]*\])?(\{[^}]*\})?", "", text)
         text = re.sub(r"\\end\{" + env + r"\}", "", text)
     text = re.sub(r"(?m)^\s*\\item\s+", "- ", text)
 

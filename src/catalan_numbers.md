@@ -11,7 +11,6 @@ we can construct the following parenthesis
 expressions using three
 left and right parentheses:
 
-[noitemsep]
 - `()()()`
 - `(())()`
 - `()(())`

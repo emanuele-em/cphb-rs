@@ -121,16 +121,16 @@
         - [Operations](matrix_operations.md)
         - [Linear recurrences](linear_recurrences.md)
         - [Graphs and matrices](graphs_and_matrices.md)
+    - [Game theory](game_theory.md)
+        - [Game states](game_states.md)
+        - [Nim game](nim_game.md)
+        - [Sprague–Grundy theorem](sprague_grundy_theorem.md)
 <!--     - [Probability](README.md) -->
 <!--         - [Calculation](README.md) -->
 <!--         - [Events](README.md) -->
 <!--         - [Random variables](README.md) -->
 <!--         - [Markov chains](README.md) -->
 <!--         - [Randomized algorithms](README.md) -->
-<!--     - [Game theory](README.md) -->
-<!--         - [Game states](README.md) -->
-<!--         - [Nim game](README.md) -->
-<!--         - [Sprague–Grundy theorem](README.md) -->
 <!--     - [String algorithms](README.md) -->
 <!--         - [String terminology](README.md) -->
 <!--         - [Trie structure](README.md) -->

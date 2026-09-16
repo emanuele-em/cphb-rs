@@ -158,6 +158,19 @@ def lint_summary(src):
     with open(path, encoding="utf-8") as fh:
         lines = fh.read().split("\n")
 
+    # mdBook stops parsing the list at the first commented-out entry, so a
+    # live entry placed after one is silently never built -- no warning, and
+    # the page simply does not exist. Live entries must stay contiguous.
+    seen_comment = 0
+    for n, line in enumerate(lines, 1):
+        if line.strip().startswith("<!--"):
+            seen_comment = seen_comment or n
+        elif seen_comment and re.match(r"\s*- \[", line):
+            problems.append(("SUMMARY.md", n, "summary",
+                             f"live entry after the commented-out block at line "
+                             f"{seen_comment}: mdBook stops parsing there, so this "
+                             "chapter is never built"))
+
     linked = set()
     for n, line in enumerate(lines, 1):
         if line.strip().startswith("<!--"):
