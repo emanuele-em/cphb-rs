@@ -136,10 +136,10 @@
         - [Trie structure](trie_structure.md)
         - [String hashing](string_hashing.md)
         - [Z-algorithm](z_algorithm.md)
-<!--     - [Square root algorithms](README.md) -->
-<!--         - [Combining algorithms](README.md) -->
-<!--         - [Integer partitions](README.md) -->
-<!--         - [Mo’s algorithm](README.md) -->
+    - [Square root algorithms](square_root_algorithms.md)
+        - [Combining algorithms](combining_algorithms.md)
+        - [Integer partitions](integer_partitions.md)
+        - [Mo’s algorithm](mos_algorithm.md)
 <!--     - [Segment trees revisited](README.md) -->
 <!--         - [Lazy propagation](README.md) -->
 <!--         - [Dynamic trees](README.md) -->
