@@ -131,11 +131,11 @@
         - [Game states](game_states.md)
         - [Nim game](nim_game.md)
         - [Sprague–Grundy theorem](sprague_grundy_theorem.md)
-<!--     - [String algorithms](README.md) -->
-<!--         - [String terminology](README.md) -->
-<!--         - [Trie structure](README.md) -->
-<!--         - [String hashing](README.md) -->
-<!--         - [Z-algorithm](README.md) -->
+    - [String algorithms](string_algorithms.md)
+        - [String terminology](string_terminology.md)
+        - [Trie structure](trie_structure.md)
+        - [String hashing](string_hashing.md)
+        - [Z-algorithm](z_algorithm.md)
 <!--     - [Square root algorithms](README.md) -->
 <!--         - [Combining algorithms](README.md) -->
 <!--         - [Integer partitions](README.md) -->
