@@ -111,12 +111,12 @@
         - [Modular arithmetic](modular_arithmetic.md)
         - [Solving equations](solving_equations.md)
         - [Other results](other_results.md)
-<!--     - [Combinatorics](README.md) -->
-<!--         - [Binomial coefficients](README.md) -->
-<!--         - [Catalan numbers](README.md) -->
-<!--         - [Inclusion-exclusion](README.md) -->
-<!--         - [Burnside’s lemma](README.md) -->
-<!--         - [Cayley’s formula](README.md) -->
+    - [Combinatorics](combinatorics.md)
+        - [Binomial coefficients](binomial_coefficients.md)
+        - [Catalan numbers](catalan_numbers.md)
+        - [Inclusion-exclusion](inclusion_exclusion.md)
+        - [Burnside’s lemma](burnsides_lemma.md)
+        - [Cayley’s formula](cayleys_formula.md)
 <!--     - [Matrices](README.md) -->
 <!--         - [Operations](README.md) -->
 <!--         - [Linear recurrences](README.md) -->
