@@ -53,6 +53,13 @@ def lint_file(path):
     with open(path, encoding="utf-8") as fh:
         lines = fh.read().split("\n")
 
+    # A NUL byte means tex2md.py left a masking sentinel behind. Markdown
+    # renders it invisibly and grep treats the file as binary, so it hides.
+    for n, line in enumerate(lines, 1):
+        if "\x00" in line:
+            problems.append((n, "sentinel",
+                             "NUL byte: an unreplaced tex2md masking sentinel"))
+
     in_tikz = False
     tikz_start = 0
     in_code = False
@@ -101,6 +108,14 @@ def lint_file(path):
         if "\\\\[" in line or re.search(r"\\+begin\{(equation\*?|align\*?|gather\*?)\}", line):
             in_display = True
         if in_display:
+            # A line holding only an operator is invisible to LaTeX but not
+            # to Markdown: a lone "=" or "-" is a setext heading underline
+            # and splits the display block in two.
+            if stripped and re.fullmatch(r"[=+\-*/<>~.,;:|]+", stripped):
+                problems.append((n, "math",
+                                 f"line holding only `{stripped}` inside display math: "
+                                 "Markdown reads it as a heading/bullet and splits the "
+                                 "block (join it to the next line)"))
             m = re.search(r"(\\+)\s*$", line)
             if m and len(m.group(1)) % 4 != 0:
                 problems.append((n, "math",

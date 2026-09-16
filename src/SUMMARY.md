@@ -117,10 +117,10 @@
         - [Inclusion-exclusion](inclusion_exclusion.md)
         - [Burnside’s lemma](burnsides_lemma.md)
         - [Cayley’s formula](cayleys_formula.md)
-<!--     - [Matrices](README.md) -->
-<!--         - [Operations](README.md) -->
-<!--         - [Linear recurrences](README.md) -->
-<!--         - [Graphs and matrices](README.md) -->
+    - [Matrices](matrices.md)
+        - [Operations](matrix_operations.md)
+        - [Linear recurrences](linear_recurrences.md)
+        - [Graphs and matrices](graphs_and_matrices.md)
 <!--     - [Probability](README.md) -->
 <!--         - [Calculation](README.md) -->
 <!--         - [Events](README.md) -->

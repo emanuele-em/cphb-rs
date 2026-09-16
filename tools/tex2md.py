@@ -62,6 +62,32 @@ def replace_cmd(text, name, render):
     return "".join(out)
 
 
+# A line holding nothing but an operator is invisible to LaTeX but not to
+# Markdown: a lone "=" or "-" is a setext heading underline, and a lone "+"
+# or "-" is a list bullet. The upstream book puts operators on their own
+# line between matrices, which would silently split the display block and
+# turn the preceding paragraph into a heading. Join them onto the next line
+# -- whitespace inside math carries no meaning, so the LaTeX is unchanged.
+OPERATOR_ONLY = re.compile(r"^[=+\-*/<>~.,;:|]+$")
+
+
+def join_operator_lines(s):
+    """Append operator-only lines to the PREVIOUS line.
+
+    Prepending them to the next line instead would leave the line starting
+    with "+ " or "- ", which Markdown reads as a list bullet -- trading one
+    bug for another.
+    """
+    out = []
+    for line in s.split("\n"):
+        stripped = line.strip()
+        if stripped and OPERATOR_ONLY.match(stripped) and out:
+            out[-1] = out[-1].rstrip() + " " + stripped
+        else:
+            out.append(line)
+    return "\n".join(out)
+
+
 def double_all(s):
     """Double every backslash (display-math convention used by ch21)."""
     return s.replace("\\", "\\\\")
@@ -121,7 +147,7 @@ def unmask(text, m):
             rendered = ("<!-- TODO-RUST: rewrite this listing in idiomatic Rust -->\n"
                         "```cpp\n" + body.strip("\n") + "\n```")
         elif kind == "D":
-            inner = body.strip()
+            inner = join_operator_lines(body.strip())
             if re.match(r"\\begin\{(equation|align|gather)", inner):
                 # already a display environment; wrapping it in \[ \] would nest
                 rendered = double_all(inner)
@@ -155,11 +181,6 @@ def convert_prose(text, cites, footnotes):
     text = replace_cmd(text, "subsubsection*", lambda a: f"\n## {a}\n")
     text = replace_cmd(text, "subsubsection", lambda a: f"\n## {a}\n")
 
-    def footnote(arg):
-        footnotes.append(arg.strip())
-        return f"[^{len(footnotes)}]"
-    text = replace_cmd(text, "footnote", footnote)
-
     def cite(arg):
         nums = [str(cites[k.strip()]) for k in arg.split(",") if k.strip() in cites]
         return "[" + ", ".join(nums) + "]" if nums else ""
@@ -173,6 +194,15 @@ def convert_prose(text, cites, footnotes):
 
     text = text.replace("---", "\u2014").replace("--", "\u2013")
     text = text.replace("~", " ")
+
+    # Extract footnotes LAST, so their bodies have already been through every
+    # transform above while still part of the text. Pulling them out earlier
+    # leaves \cite and masked-math sentinels unresolved inside the notes.
+    def footnote(arg):
+        footnotes.append(arg.strip())
+        return f"[^{len(footnotes)}]"
+    text = replace_cmd(text, "footnote", footnote)
+
     text = re.sub(r"\n{3,}", "\n\n", text)
     return text.strip()
 
@@ -196,12 +226,13 @@ def convert_chunk(title, body, cites, level="#"):
     masked = mask_environments(body, m)
     footnotes = []
     prose = convert_prose(masked, cites, footnotes)
-    out = unmask(prose, m)
-    text = f"{level} {title}\n\n{out}\n"
+    text = f"{level} {title}\n\n{prose}\n"
     if footnotes:
         text += "\n___\n\n" + "\n\n".join(
             f"[^{i}]: {f}" for i, f in enumerate(footnotes, 1)) + "\n"
-    return text
+    # unmask the assembled document, footnote bodies included -- they can
+    # hold masked math of their own
+    return unmask(text, m)
 
 
 def main():
@@ -228,6 +259,11 @@ def main():
         path = os.path.join(outdir, slug(title) + ".md")
         open(path, "w", encoding="utf-8").write(convert_chunk(title, body, cites))
         written.append(path)
+
+    leaked = [p for p in written if "\x00" in open(p, encoding="utf-8").read()]
+    if leaked:
+        print("ERROR: unreplaced masking sentinels left in: " + ", ".join(leaked))
+        return 1
 
     for p in written:
         n = sum(1 for _ in open(p, encoding="utf-8"))
