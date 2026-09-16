@@ -126,6 +126,6 @@ for y in 1..=n{
         sum[y][x] = cmp::max(sum[y][x-1], sum[y-1][x])+value[y][x];
 # print!("{} ", sum[y][x]);
     }
-#println!("");
+# println!("");
 }
 ```

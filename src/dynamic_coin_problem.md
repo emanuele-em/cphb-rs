@@ -158,8 +158,8 @@ the value can be directly retrieved from the HashMap.
 
 In this problem, we use HashMaps
 ```rust
-# const N: usize = 10;
-let ready = HashMap::new();
+# use std::collections::HashMap;
+let ready: HashMap<isize, isize> = HashMap::new();
 # println!("ready: {ready:?}");
 ```
 

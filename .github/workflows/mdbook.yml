@@ -29,8 +29,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      MDBOOK_VERSION: 0.4.52
-      MDBOOK_GRAPHVIZ_VERSION: 0.2.0
+      MDBOOK_VERSION: 0.5.2
+      MDBOOK_GRAPHVIZ_VERSION: 0.3.1
     steps:
       - uses: actions/checkout@v4
       - name: Install mdBook and Graphviz
@@ -39,6 +39,8 @@ jobs:
           sudo apt-get install --yes graphviz
           cargo install --locked --version "${MDBOOK_VERSION}" mdbook
           cargo install --locked --version "${MDBOOK_GRAPHVIZ_VERSION}" mdbook-graphviz
+      - name: Test Rust code blocks
+        run: mdbook test
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5

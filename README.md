@@ -8,14 +8,18 @@ on macOS or `sudo apt-get install graphviz` on Ubuntu), then install the
 same build tools used by CI:
 
 ```sh
-cargo install --locked --version 0.4.52 --root .tools mdbook
-cargo install --locked --version 0.2.0 --root .tools mdbook-graphviz
+cargo install --locked --version 0.5.2 --root .tools mdbook
+cargo install --locked --version 0.3.1 --root .tools mdbook-graphviz
 export PATH="$PWD/.tools/bin:$PATH"
 mdbook serve --hostname 127.0.0.1 --port 3000
 ```
 
 Open <http://127.0.0.1:3000>. Use `mdbook build` for a static build in `book/`.
-The book currently requires mdBook 0.4, not 0.5.
+
+Run `mdbook test` to compile and run every Rust code block in the book.
+CI runs it on every push, so a snippet that does not compile fails the build.
+Blocks that cannot compile standalone are tagged `rust, ignore`; blocks that are
+meant to be rejected by the compiler are tagged `rust, compile_fail`.
 
 ### Math and diagrams
 

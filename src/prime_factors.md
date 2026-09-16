@@ -143,7 +143,7 @@ has no factors between $2$ and $\lfloor \sqrt n \rfloor$.
 If $n>1$, it is prime and the last factor.
 
 ```rust
-#println!("n = 100 -> {:?}", factors(100));
+# println!("n = 100 -> {:?}", factors(100));
 fn factors(mut n: isize) -> Vec<isize>{
     let mut f = Vec::new();
     let mut x = 2;
@@ -240,8 +240,8 @@ The code assumes that each element of
 `sieve` is initially zero.
 
 ```rust
-#let mut n = 20;
-#let mut sieve = vec![0_usize;n+1];
+# let mut n = 20;
+# let mut sieve = vec![0_usize;n+1];
 for x in 2..=n {
     if sieve[x] == 0 {
         let mut u = 2*x;
@@ -251,7 +251,7 @@ for x in 2..=n {
         }
     }
 }
-#println!("{:?}", &sieve[2..]);
+# println!("{:?}", &sieve[2..]);
 ```
 
 The inner loop of the algorithm is executed
@@ -312,7 +312,7 @@ fn gcd(a: usize, b:usize)-> usize{
     if b == 0 {return a}
     gcd(b, a%b)
 }
-#println!("gcd between 100 and 85 is {:?}", gcd(100, 85));
+# println!("gcd between 100 and 85 is {:?}", gcd(100, 85));
 ```
 
 It can be shown that Euclid's algorithm works
