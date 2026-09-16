@@ -7,8 +7,10 @@ For example, ${5 \choose 3}=10$,
 because the set $\\{1,2,3,4,5\\}$
 has 10 subsets of 3 elements:
 \\[
-\\{1,2,3\\}, \\{1,2,4\\}, \\{1,2,5\\}, \\{1,3,4\\}, \\{1,3,5\\}, 
+\\begin{array}{l}
+\\{1,2,3\\}, \\{1,2,4\\}, \\{1,2,5\\}, \\{1,3,4\\}, \\{1,3,5\\}, \\\\
 \\{1,4,5\\}, \\{2,3,4\\}, \\{2,3,5\\}, \\{2,4,5\\}, \\{3,4,5\\}
+\\end{array}
 \\]
 
 ## Formula 1
@@ -135,7 +137,7 @@ where each value equals the sum of two
 above values:
 
 <script type="text/tikz">
-\begin{tikzpicture}{0.9}
+\begin{tikzpicture}[scale=0.9]
 \node at (0,0) {1};
 \node at (-0.5,-0.5) {1};
 \node at (0.5,-0.5) {1};
