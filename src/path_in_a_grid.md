@@ -104,7 +104,7 @@ We assume that $\texttt{sum}(y,x)=0$
 if $y=0$ or $x=0$ (because no such paths exist),
 so the recursive formula also works when $y=1$ or $x=1$.
 
-Since the function \texttt{sum} has two parameters,
+Since the function `sum` has two parameters,
 the dynamic programming array also has two dimensions.
 For example, we can use an array
 
@@ -126,6 +126,6 @@ for y in 1..=n{
         sum[y][x] = cmp::max(sum[y][x-1], sum[y-1][x])+value[y][x];
 # print!("{} ", sum[y][x]);
     }
-#println!("");
+# println!("");
 }
 ```

@@ -1,4 +1,4 @@
-#  Applications
+# Applications
 
 Using the graph traversal algorithms,
 we can check many properties of graphs.

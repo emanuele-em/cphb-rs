@@ -228,4 +228,4 @@ using the above algorithm already takes about a minute
 on a modern computer[^1]
 ___
 
-[^1] There is no known way to efficiently calculate larger values of $q(n)$.  The current record is $q(27)=234907967154122528$, calculated in 2016 [55].
+[^1]: There is no known way to efficiently calculate larger values of $q(n)$.  The current record is $q(27)=234907967154122528$, calculated in 2016 [55].

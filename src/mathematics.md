@@ -30,7 +30,7 @@ $$
 $$
 is an arithmetic progression with constant 4. The sum of an arithmetic progression can be calculated using the formula
 $$
-\underbrace{a + \cdots + b}_{n \,\, \textrm{numbers}} = \frac{n(a+b)}{2}
+\underbrace{a + \cdots + b}_{n \\,\\, \textrm{numbers}} = \frac{n(a+b)}{2}
 $$
 
 where a is the first number, b is the last number and n is the amount of numbers.
@@ -107,21 +107,21 @@ $$
 4 \in X \hspace{10px}\textrm{and}\hspace{10px} 5 \notin X
 $$
 New sets can be constructed using set operations:
-- The **intersection** $A \cap B$ consists of elements that are in both $A$ and $B$. For example, if $A=\{1,2,5\}$ and $B=\{2,4\}$, then $A \cap B = \{2\}$.
-- The **union** $A \cup B$ consists of elements that are in $A$ or $B$ or both. For example, if $A=\{3,7\}$ and $B=\{2,3,8\}$, then $A \cup B = \{2,3,7,8\}$.
-- The **complement** $\bar A$ consists of elements that are not in $A$. The interpretation of a complement depends on the **universal set**, which contains all possible elements. For example, if $A=\{1,2,5,7\}$ and the universal set is $\{1,2,\ldots,10\}$, then $\bar A = \{3,4,6,8,9,10\}$.
-- The **difference** $A \setminus B = A \cap \bar B$ consists of elements that are in $A$ but not in $B$. Note that $B$ can contain elements that are not in $A$. For example, if $A=\{2,3,7,8\}$ and $B=\{3,5,8\}$, then $A \setminus B = \{2,7\}$.
+- The **intersection** $A \cap B$ consists of elements that are in both $A$ and $B$. For example, if $A=\\{1,2,5\\}$ and $B=\\{2,4\\}$, then $A \cap B = \\{2\\}$.
+- The **union** $A \cup B$ consists of elements that are in $A$ or $B$ or both. For example, if $A=\\{3,7\\}$ and $B=\\{2,3,8\\}$, then $A \cup B = \\{2,3,7,8\\}$.
+- The **complement** $\bar A$ consists of elements that are not in $A$. The interpretation of a complement depends on the **universal set**, which contains all possible elements. For example, if $A=\\{1,2,5,7\\}$ and the universal set is $\\{1,2,\ldots,10\\}$, then $\bar A = \\{3,4,6,8,9,10\\}$.
+- The **difference** $A \setminus B = A \cap \bar B$ consists of elements that are in $A$ but not in $B$. Note that $B$ can contain elements that are not in $A$. For example, if $A=\\{2,3,7,8\\}$ and $B=\\{3,5,8\\}$, then $A \setminus B = \\{2,7\\}$.
 
 If each element of $A$ also belongs to $S$, we say that $A$ is a **subset** of $S$, denoted by $A \subset S$.
 A set $S$ always has $2^{|S|}$ subsets, including the empty set.
-For example, the subsets of the set $\{2,4,7\}$ are
+For example, the subsets of the set $\\{2,4,7\\}$ are
 $$
 \emptyset, \{2\}, \{4\}, \{7\}, \{2,4\}, \{2,7\}, \{4,7\}, \{2,4,7\}
 $$
 
 Some often used sets are $\mathbb{N}$ (natural numbers), $\mathbb{Z}$ (integers), $\mathbb{Q}$ (rational numbers) and $\mathbb{R}$ (real numbers).
 The set $\mathbb{N}$ can be defined in two ways, depending on the situation:
-either $\mathbb{N}=\{0,1,2,\ldots\}$ or $\mathbb{N}=\{1,2,3,.\ldots\}$ .
+either $\mathbb{N}=\\{0,1,2,\ldots\\}$ or $\mathbb{N}=\\{1,2,3,.\ldots\\}$ .
 
 We can also construct a set using a rule of the form
 $$
@@ -271,7 +271,7 @@ For example, the representation of $123$ in base $2$ is $1111011$ and $\lfloor \
 
 ___
 
-[^1] There is even a general formula for such sums, called Faulhaber’s formula, but it is too
+[^1]: There is even a general formula for such sums, called Faulhaber’s formula, but it is too
 complex to be presented here.
 
-[^2] Fibonacci (c. 1175--1250) was an Italian mathematician.
+[^2]: Fibonacci (c. 1175--1250) was an Italian mathematician.

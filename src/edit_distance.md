@@ -31,7 +31,7 @@ edit distance between prefixes
 Thus, using this function, the edit distance
 between `x` and `y` equals `distance(n-1,m-1)`.
 
-We can calculate values of \texttt{distance}
+We can calculate values of `distance`
 as follows:
 \\begin{equation*}
 \\begin{split}
@@ -56,7 +56,7 @@ In the two first cases, one editing operation is needed
 In the last case, if $\texttt{x}[a]=\texttt{y}[b]$, we can match the last characters without editing,
 and otherwise one editing operation is needed (modify).
 
-The following table shows the values of \texttt{distance}
+The following table shows the values of `distance`
 in the example case:
 
 <script type="text/tikz">
@@ -181,4 +181,4 @@ the edit distance between **LOV** and **MOV**, etc.
 
 ___
 
-[^1] The distance is named after V. I. Levenshtein who studied it in connection with binary codes [49].
+[^1]: The distance is named after V. I. Levenshtein who studied it in connection with binary codes [49].

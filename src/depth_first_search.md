@@ -1,4 +1,4 @@
-#  Depth-first search
+# Depth-first search
 
 **Depth-first search** (DFS)
 is a straightforward graph traversal technique.

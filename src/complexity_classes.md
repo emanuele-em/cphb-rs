@@ -11,8 +11,8 @@ The following list contains common time complexities of algorithms:
 | $O(n \log n)$ | **Linearithmic algorithm**: This time complexity often indicates that the algorithm sorts the input, because the time complexity of efficient sorting algorithms is $O(n \log n)$.  Another possibility is that the algorithm uses a data structure where each operation takes $O(\log n)$ time. |
 | $O(n^2)$ | **Quadratic algorithm**: a quadratic algorithm often contains two nested loops.  It is possible to go through all pairs of the input elements in $O(n^2)$ time. |
 | $O(n^3)$ | **Cubic algorithm**: it often contains three nested loops.  It is possible to go through all triplets of the input elements in $O(n^3)$ time. |
-| $O(2^n)$ |  **Exponential algorithm**: This time complexity often indicates that the algorithm iterates through all subsets of the input elements.  For example, the subsets of $\{1,2,3\}$ are $\emptyset$, $\{1\}$, $\{2\}$, $\{3\}$, $\{1,2\}$, $\{1,3\}$, $\{2,3\}$ and $\{1,2,3\}$. |
-| $O(n!)$ | **Factorial algorithm**: This time complexity often indicates that the algorithm iterates through all permutations of the input elements.  For example, the permutations of $\{1,2,3\}$ are $(1,2,3)$, $(1,3,2)$, $(2,1,3)$, $(2,3,1)$, $(3,1,2)$ and $(3,2,1)$. |
+| $O(2^n)$ |  **Exponential algorithm**: This time complexity often indicates that the algorithm iterates through all subsets of the input elements.  For example, the subsets of $\\{1,2,3\\}$ are $\emptyset$, $\\{1\\}$, $\\{2\\}$, $\\{3\\}$, $\\{1,2\\}$, $\\{1,3\\}$, $\\{2,3\\}$ and $\\{1,2,3\\}$. |
+| $O(n!)$ | **Factorial algorithm**: This time complexity often indicates that the algorithm iterates through all permutations of the input elements.  For example, the permutations of $\\{1,2,3\\}$ are $(1,2,3)$, $(1,3,2)$, $(2,1,3)$, $(2,3,1)$, $(3,1,2)$ and $(3,2,1)$. |
 
 An algorithm is **polynomial** if its time complexity is at most $O(n^k)$ where $k$ is a constant.  All the above time complexities except $O(2^n)$ and $O(n!)$ are polynomial.  In practice, the constant $k$ is usually small, and therefore a polynomial time complexity roughly means that the algorithm is _efficient_.
 
@@ -21,4 +21,4 @@ no polynomial algorithm is known, i.e., nobody knows how to solve them efficient
 
 ___
 
-[^1] A classic book on the topic is M. R. Garey's and D. S. Johnson's _Computers and Intractability: A Guide to the Theory of NP-Completeness_ [28].
+[^1]: A classic book on the topic is M. R. Garey's and D. S. Johnson's _Computers and Intractability: A Guide to the Theory of NP-Completeness_ [28].

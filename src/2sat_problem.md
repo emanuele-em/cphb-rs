@@ -166,10 +166,10 @@ The component graph for the formula $L_1$ is as follows:
 </script>
 
 The components are
-$A = \{\lnot x_4\}$,
-$B = \{x_1, x_2, \lnot x_3\}$,
-$C = \{\lnot x_1, \lnot x_2, x_3\}$ and
-$D = \{x_4\}$.
+$A = \\{\lnot x_4\\}$,
+$B = \\{x_1, x_2, \lnot x_3\\}$,
+$C = \\{\lnot x_1, \lnot x_2, x_3\\}$ and
+$D = \\{x_4\\}$.
 When constructing the solution,
 we first process the component $D$
 where $x_4$ becomes true.
@@ -197,4 +197,4 @@ for solving the problem is known.
 
 ___
 
-[^1] The algorithm presented here was introduced in [4].  There is also another well-known linear-time algorithm [19] that is based on backtracking.
+[^1]: The algorithm presented here was introduced in [4].  There is also another well-known linear-time algorithm [19] that is based on backtracking.

@@ -1,6 +1,6 @@
 # Floyd–Warshall algorithm
 
-The **Floyd–Warshall algorithm**
+The **Floyd–Warshall algorithm**[^1]
 provides an alternative way to approach the problem
 of finding shortest paths.
 Unlike the other algorithms of this chapter,
@@ -203,4 +203,4 @@ However, the algorithm can only be used when the graph
 is so small that a cubic time complexity is fast enough.
 ___
 
-[^1] The algorithm is named after R. W. Floyd and S. Warshall who published it independently in 1962 [23, 70].
+[^1]: The algorithm is named after R. W. Floyd and S. Warshall who published it independently in 1962 [23, 70].

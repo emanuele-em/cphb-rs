@@ -1,6 +1,6 @@
 # Bellman–Ford algorithm
 
-The **Bellman–Ford algorithm** finds
+The **Bellman–Ford algorithm**[^1] finds
 shortest paths from a starting node to all
 nodes of the graph.
 The algorithm can process all kinds of graphs,
@@ -289,4 +289,4 @@ original Bellman–Ford algorithm.
 
 ___
 
-[^1] The algorithm is named after R. E. Bellman and L. R. Ford who published it independently in 1958 and 1956, respectively [5, 24]
+[^1]: The algorithm is named after R. E. Bellman and L. R. Ford who published it independently in 1958 and 1956, respectively [5, 24]

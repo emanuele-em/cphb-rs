@@ -159,6 +159,6 @@ struct P {
 
 ___
 
-[^1] Timsort is a hybrid, stable sorting algorithm, derived from merge sort and insertion sort, designed to perform well on many kinds of real-world data [https://en.wikipedia.org/wiki/Timsort](https://en.wikipedia.org/wiki/Timsort)
+[^1]: Timsort is a hybrid, stable sorting algorithm, derived from merge sort and insertion sort, designed to perform well on many kinds of real-world data [https://en.wikipedia.org/wiki/Timsort](https://en.wikipedia.org/wiki/Timsort)
 
-[^2] the algorithm was developed by Orson Peters [https://github.com/orlp/pdqsort](https://github.com/orlp/pdqsort)
+[^2]: the algorithm was developed by Orson Peters [https://github.com/orlp/pdqsort](https://github.com/orlp/pdqsort)

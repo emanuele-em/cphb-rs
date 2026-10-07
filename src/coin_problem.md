@@ -5,13 +5,13 @@ where we are given a set of coins
 and our task is to form a sum of money $n$
 using the coins.
 The values of the coins are
-$\texttt{coins}=\{c_1,c_2,\ldots,c_k\}$,
+$\texttt{coins}=\\{c_1,c_2,\ldots,c_k\\}$,
 and each coin can be used as many times we want.
 What is the minimum number of coins needed?
 
 For example, if the coins are the euro coins (in cents)
 $$
-\{1,2,5,10,20,50,100,200\}
+\\{1,2,5,10,20,50,100,200\\}
 $$
 and $n=520$,
 we need at least four coins.
@@ -77,7 +77,7 @@ We can prove that a greedy algorithm does not work
 by showing a counterexample
 where the algorithm gives a wrong answer.
 In this problem we can easily find a counterexample:
-if the coins are $\{1,3,4\}$ and the target sum
+if the coins are $\\{1,3,4\\}$ and the target sum
 is 6, the greedy algorithm produces the solution
 $4+1+1$ while the optimal solution is $3+3$.
 
@@ -91,4 +91,4 @@ programming algorithm that always gives the
 correct answer.
 ___
 
-[^1] However, it is possible to \emph{check} in polynomial time if the greedy algorithm presented in this chapter works for a given set of coins [53]
+[^1]: However, it is possible to _check_ in polynomial time if the greedy algorithm presented in this chapter works for a given set of coins [53]

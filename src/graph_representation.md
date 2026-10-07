@@ -1,4 +1,4 @@
-#  Graph representation
+# Graph representation
 
 There are several ways to represent graphs
 in algorithms.

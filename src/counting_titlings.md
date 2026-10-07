@@ -38,7 +38,7 @@ The problem can be solved using dynamic programming
 by going through the grid row by row.
 Each row in a solution can be represented as a
 string that contains $m$ characters from the set
-$\{\sqcap, \sqcup, \sqsubset, \sqsupset \}$.
+$\\{\sqcap, \sqcup, \sqsubset, \sqsupset \\}$.
 For example, the above solution consists of four rows
 that correspond to the following strings:
 
@@ -57,7 +57,7 @@ only by the state of the previous row.
 A solution is valid if row $1$ does not contain
 the character $\sqcup$,
 row $n$ does not contain the character $\sqcap$,
-and all consecutive rows are \emph{compatible}.
+and all consecutive rows are _compatible_.
 For example, the rows
 $\sqcup \sqsubset \sqsupset \sqcup \sqcap \sqcap \sqcup$ and
 $\sqsubset \sqsupset \sqsubset \sqsupset \sqcup \sqcup \sqcap$ 
@@ -104,4 +104,4 @@ how to store the intermediate results accurately.
 
 ___
 
-[^1] Surprisingly, this formula was discovered in 1961 by two research teams [43, 67] that worked independently.
+[^1]: Surprisingly, this formula was discovered in 1961 by two research teams [43, 67] that worked independently.

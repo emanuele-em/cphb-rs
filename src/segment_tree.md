@@ -12,7 +12,7 @@ Compared to a binary indexed tree,
 the advantage of a segment tree is that it is
 a more general data structure.
 While binary indexed trees only support
-sum queries,
+sum queries[^2],
 segment trees also support other queries.
 On the other hand, a segment tree requires more
 memory and is a bit more difficult to implement.
@@ -421,8 +421,8 @@ in the tree at each step.
 
 ___
 
-[^1] The bottom-up-implementation in this chapter corresponds to that in [62]. Similar structures were used in late 1970's to solve geometric problems [9].
+[^1]: The bottom-up-implementation in this chapter corresponds to that in [62]. Similar structures were used in late 1970's to solve geometric problems [9].
 
-[^2] In fact, using _two_ binary indexed trees it is possible to support minimum queries [16], but this is more complicated than to use a segment tree.
+[^2]: In fact, using _two_ binary indexed trees it is possible to support minimum queries [16], but this is more complicated than to use a segment tree.
 
 

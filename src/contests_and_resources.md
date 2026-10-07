@@ -67,4 +67,4 @@ Algorithms [13]
 
 ___
 
-[^1] The exact number of final slots varies from year to year; in 2017, there were 133 final slots. of final slots available
+[^1]: The exact number of final slots varies from year to year; in 2017, there were 133 final slots. of final slots available

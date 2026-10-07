@@ -1,4 +1,4 @@
-#  Bit optimizations
+# Bit optimizations
 
 Many algorithms can be optimized using
 bit operations.

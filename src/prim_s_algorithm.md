@@ -150,4 +150,4 @@ Still, most competitive programmers use Kruskal's algorithm.
 
 ___
 
-[^1] The algorithm is named after R. C. Prim who published it in 1957 [54].  However, the same algorithm was discovered already in 1930 by V. Jarník.
+[^1]: The algorithm is named after R. C. Prim who published it in 1957 [54].  However, the same algorithm was discovered already in 1930 by V. Jarník.

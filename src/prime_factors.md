@@ -63,7 +63,7 @@ because $28=1+2+4+7+14$.
 It is easy to show that there is an infinite number
 of primes.
 If the number of primes would be finite,
-we could construct a set $P=\{p_1,p_2,\ldots,p_n\}$
+we could construct a set $P=\\{p_1,p_2,\ldots,p_n\\}$
 that would contain all the primes.
 For example, $p_1=2$, $p_2=3$, $p_3=5$, and so on.
 However, using $P$, we could form a new prime
@@ -99,7 +99,7 @@ but nobody has been able to prove them.
 For example, the following conjectures are famous:
 
 - **Goldbach's conjecture**: Each even integer $n>2$ can be represented as a sum $n=a+b$ so that both $a$ and $b$ are primes.
-- **Twin prime conjecture**: There is an infinite number of pairs of the form $\{p,p+2\}$, where both $p$ and $p+2$ are primes.
+- **Twin prime conjecture**: There is an infinite number of pairs of the form $\\{p,p+2\\}$, where both $p$ and $p+2$ are primes.
 - **Legendre's conjecture**: There is always a prime between numbers $n^2$ and $(n+1)^2$, where $n$ is any positive integer.
 
 ## Basic algorithms
@@ -143,7 +143,7 @@ has no factors between $2$ and $\lfloor \sqrt n \rfloor$.
 If $n>1$, it is prime and the last factor.
 
 ```rust
-#println!("n = 100 -> {:?}", factors(100));
+# println!("n = 100 -> {:?}", factors(100));
 fn factors(mut n: isize) -> Vec<isize>{
     let mut f = Vec::new();
     let mut x = 2;
@@ -240,8 +240,8 @@ The code assumes that each element of
 `sieve` is initially zero.
 
 ```rust
-#let mut n = 20;
-#let mut sieve = vec![0_usize;n+1];
+# let mut n = 20;
+# let mut sieve = vec![0_usize;n+1];
 for x in 2..=n {
     if sieve[x] == 0 {
         let mut u = 2*x;
@@ -251,7 +251,7 @@ for x in 2..=n {
         }
     }
 }
-#println!("{:?}", &sieve[2..]);
+# println!("{:?}", &sieve[2..]);
 ```
 
 The inner loop of the algorithm is executed
@@ -295,7 +295,7 @@ The algorithm is based on the following formula:
 \\[
     \\textrm{gcd}(a,b) = \\begin{cases}
                a        & b = 0\\\\
-               \\textrm{gcd}(b,a \\bmod b) & b \\neq 0\\
+               \\textrm{gcd}(b,a \\bmod b) & b \\neq 0\\\\
            \\end{cases}
 \\]
 
@@ -312,7 +312,7 @@ fn gcd(a: usize, b:usize)-> usize{
     if b == 0 {return a}
     gcd(b, a%b)
 }
-#println!("gcd between 100 and 85 is {:?}", gcd(100, 85));
+# println!("gcd between 100 and 85 is {:?}", gcd(100, 85));
 ```
 
 It can be shown that Euclid's algorithm works
@@ -329,8 +329,7 @@ For example,
 
 Numbers $a$ and $b$ are **coprime**
 if $\textrm{gcd}(a,b)=1$.
-**Euler's totient function** $\varphi(n)$
-%\footnote{Euler presented this function in 1763.}
+**Euler's totient function** $\varphi(n)$[^2]
 gives the number of coprime numbers to $n$
 between $1$ and $n$.
 For example, $\varphi(12)=4$,
@@ -349,4 +348,6 @@ For example, $\varphi(12)=2^1 \cdot (2-1) \cdot 3^0 \cdot (3-1)=4$.
 Note that $\varphi(n)=n-1$ if $n$ is prime.
 
 ___
-[^1] Euclid was a Greek mathematician who lived in about 300 BC. This is perhaps the first known algorithm in history.
+[^1]: Euclid was a Greek mathematician who lived in about 300 BC. This is perhaps the first known algorithm in history.
+
+[^2]: Euler presented this function in 1763.

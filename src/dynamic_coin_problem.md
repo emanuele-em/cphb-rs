@@ -2,7 +2,7 @@
 
 We first focus on a problem that we
 have already seen in Chapter 6:
-Given a set of coin values $\texttt{coins} = \{c_1,c_2,\ldots,c_k\}$
+Given a set of coin values $\texttt{coins} = \\{c_1,c_2,\ldots,c_k\\}$
 and a target sum of money $n$, our task is to
 form the sum $n$ using as few coins as possible.
 
@@ -43,7 +43,7 @@ denote the minimum
 number of coins required for a sum $x$.
 The values of the function depend on the
 values of the coins.
-For example, if $\texttt{coins} = \{1,3,4\}$,
+For example, if $\texttt{coins} = \\{1,3,4\\}$,
 the first values of the function are as follows:
 
 $$
@@ -158,8 +158,8 @@ the value can be directly retrieved from the HashMap.
 
 In this problem, we use HashMaps
 ```rust
-# const N: usize = 10;
-let ready = HashMap::new();
+# use std::collections::HashMap;
+let ready: HashMap<isize, isize> = HashMap::new();
 # println!("ready: {ready:?}");
 ```
 
@@ -306,7 +306,7 @@ Let us now consider another version
 of the coin problem where our task is to
 calculate the total number of ways
 to produce a sum $x$ using the coins.
-For example, if $\texttt{coins}=\{1,3,4\}$ and
+For example, if $\texttt{coins}=\\{1,3,4\\}$ and
 $x=5$, there are a total of 6 ways:
 
 - $1+1+1+1+1$
@@ -319,7 +319,7 @@ $x=5$, there are a total of 6 ways:
 Again, we can solve the problem recursively.
 Let $\texttt{solve}(x)$ denote the number of ways
 we can form the sum $x$.
-For example, if $\texttt{coins}=\{1,3,4\}$,
+For example, if $\texttt{coins}=\\{1,3,4\\}$,
 then $\texttt{solve}(5)=6$ and the recursive formula is:
 
 $$
@@ -348,7 +348,7 @@ If $x<0$, the value is 0, because there are no solutions.
 If $x=0$, the value is 1, because there is only one way
 to form an empty sum.
 Otherwise we calculate the sum of all values
-of the form $\texttt{solve}(x-c)$ where $c$ is in \texttt{coins}.
+of the form $\texttt{solve}(x-c)$ where $c$ is in `coins`.
 
 The following code constructs an array
 $\texttt{count}$ such that

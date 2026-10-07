@@ -2,14 +2,14 @@
 
 Next we consider the problem of generating
 all permutations of a set of $n$ elements.
-For example, the permutations of $\{0,1,2\}$ are
+For example, the permutations of $\\{0,1,2\\}$ are
 $(0,1,2)$, $(0,2,1)$, $(1,0,2)$, $(1,2,0)$,
 $(2,0,1)$ and $(2,1,0)$.
 
 Like subsets, permutations can be generated
 using recursion.
 The following function `.search()` goes
-through the permutations of the set $\{0,1,\ldots,n-1\}$.
+through the permutations of the set $\\{0,1,\ldots,n-1\\}$.
 The function builds a vector `permutation`
 that contains the permutation,
 and the search begins when the function is called with parameters:

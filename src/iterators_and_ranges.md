@@ -11,10 +11,10 @@ When you call `next` it returns `Some(Item)` as long as there are alement, and `
 
 Iterators are used in Rust standard library functions
 that are given a range of elements in a data structure.
-For example, the following code use `.fold()` that accept as parameters the starting point of the accumulator (`0`), accumulator (`accumualator`) and sum every single element (`x`) of the given range.
+For example, the following code use `.fold()` that accept as parameters the starting point of the accumulator (`0`), accumulator (`accumulator`) and sum every single element (`x`) of the given range.
 ```rust
-(0..10).fold(0, |accumulator, x| sum+x); //45
-# println!("{}", (0..10).fold(0, |accumulator, x| sum+x)); //45
+(0..10).fold(0, |accumulator, x| accumulator+x); //45
+# println!("{}", (0..10).fold(0, |accumulator, x| accumulator+x)); //45
 ```
 This code iter on a every single element of the range and edit them accordingly to the closure, then it iter on the first $5$ element:
 ```rust
@@ -31,7 +31,7 @@ iterator `it` from a `BTreeSet`:
 
 ```rust
 # use std::collections::BTreeSet;
-let mut s = BTreeSet::new();
+let s: BTreeSet<i32> = BTreeSet::new();
 let it = s.iter();
 ```
 There are a lot of method that allow you to iterate through the iterator and every type adapt each method to its structure.

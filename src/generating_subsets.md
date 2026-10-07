@@ -2,9 +2,9 @@
 
 We first consider the problem of generating
 all subsets of a set of $n$ elements.
-For example, the subsets of $\{0,1,2\}$ are
-$\emptyset$, $\{0\}$, $\{1\}$, $\{2\}$, $\{0,1\}$,
-$\{0,2\}$, $\{1,2\}$ and $\{0,1,2\}$.
+For example, the subsets of $\\{0,1,2\\}$ are
+$\emptyset$, $\\{0\\}$, $\\{1\\}$, $\\{2\\}$, $\\{0,1\\}$,
+$\\{0,2\\}$, $\\{1,2\\}$ and $\\{0,1,2\\}$.
 There are two common methods to generate subsets:
 we can either perform a recursive search
 or exploit the bit representation of integers.
@@ -15,7 +15,7 @@ An elegant way to go through all subsets
 of a set is to use recursion.
 The following function `search`
 generates the subsets of the set
-$\{0,1,\ldots,n-1\}$.
+$\\{0,1,\ldots,n-1\\}$.
 The function maintains a vector `subset`
 that will contain the elements of each subset.
 The search begins when the function is called
@@ -103,7 +103,7 @@ the last bit corresponds to element 0,
 the second last bit corresponds to element 1,
 and so on.
 For example, the bit representation of 25
-is 11001, which corresponds to the subset $\{0,3,4\}$.
+is 11001, which corresponds to the subset $\\{0,3,4\\}$.
 
 The following code goes through the subsets
 of a set of $n$ elements

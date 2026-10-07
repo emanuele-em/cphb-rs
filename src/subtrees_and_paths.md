@@ -360,6 +360,7 @@ but now each value in the last row of the array is the sum of values
 on a path from the root to the node.
 For example, the following array corresponds to the above tree:
 
+<script type="text/tikz">
 \begin{tikzpicture}[scale=0.7]
 \draw (0,1) grid (9,-2);
 
@@ -397,6 +398,7 @@ For example, the following array corresponds to the above tree:
 \node at (7.5,-1.5) {10};
 \node at (8.5,-1.5) {6};
 \end{tikzpicture}
+</script>
 
 When the value of a node increases by $x$,
 the sums of all nodes in its subtree increase by $x$.

@@ -42,13 +42,13 @@ for x in v {
 }
 ```
 
-The function `.push()` add an alement to the back of an existing Vec.
+The function `.push()` adds an element to the back of an existing Vec.
 The function `.last()` returns the last element
 in the Vec, and
 the function `.pop()` removes the last element:
 
 ```rust
-let v = vec![5,2];
+let mut v = vec![5,2];
 v.push(6);
 println!("{v:?}");
 println!("{:?}", v.last());
@@ -61,13 +61,13 @@ of elements and the initial value for each element:
 
 ```rust
 // size 10, initial value 0
-let v = vec![0;10]
-#println!("{v:?}");
+let v = vec![0;10];
+# println!("{v:?}");
 ```
 ```rust
 // size 10, initial value 5
-let v = vec![5;10]
-#println!("{v:?}");
+let v = vec![5;10];
+# println!("{v:?}");
 ```
 
 The internal implementation of a vector

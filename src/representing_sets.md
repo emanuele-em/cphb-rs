@@ -1,7 +1,7 @@
-#  Representing sets
+# Representing sets
 
 Every subset of a set
-$\{0,1,2,\ldots,n-1\}$
+$\\{0,1,2,\ldots,n-1\\}$
 can be represented as an $n$ bit integer
 whose one bits indicate which
 elements belong to the subset.
@@ -9,8 +9,8 @@ This is an efficient way to represent sets because operations can be implemented
 
 For example, since **i32** is a 32-bit type,
 an **i32** number can represent any subset
-of the set $\{0,1,2,\ldots,31\}$.
-The bit representation of the set $\{1,3,4,8\}$ is
+of the set $\\{0,1,2,\ldots,31\\}$.
+The bit representation of the set $\\{1,3,4,8\\}$ is
 
 $$
 00000000000000000000000100011010
@@ -26,7 +26,7 @@ println!("{}", 0b00000000000000000000000100011010);
 
 The following code declares an _i32_
 variable $x$ that can contain
-a subset of $\{0,1,2,\ldots,31\}$.
+a subset of $\\{0,1,2,\ldots,31\\}$.
 After this, the code adds the elements 1, 3, 4 and 8
 to the set and prints the size of the set.
 
@@ -65,8 +65,8 @@ Set operations can be implemented as follows as bit operations:
 |difference | $a \setminus b$ | $a$ \& (~$b$) |
 
 For example, the following code first constructs
-the sets $x=\{1,3,4,8\}$ and $y=\{3,6,8,9\}$,
-and then constructs the set $z = x \cup y = \{1,3,4,6,8,9\}$:
+the sets $x=\\{1,3,4,8\\}$ and $y=\\{3,6,8,9\\}$,
+and then constructs the set $z = x \cup y = \\{1,3,4,6,8,9\\}$:
 
 ```rust
 let x = (1<<1)|(1<<3)|(1<<4)|(1<<8);
@@ -81,7 +81,7 @@ println!("{}", z.count_ones());
 ## Iterating through subsets
 
 The following code goes through
-the subsets of $\{0,1,\ldots,n-1\}$:
+the subsets of $\\{0,1,\ldots,n-1\\}$:
 
 ```rust
 # let n = 10;

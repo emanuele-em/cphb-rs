@@ -150,7 +150,7 @@ of the algorithm is at least $O(n^2)$.
 
 ### Merge sort
 
-It is possible to sort an array efficiently
+It is possible to sort an array efficiently[^1]
 in $O(n \log n)$ time using algorithms
 that are not limited to swapping consecutive elements.
 One such algorithm is **merge sort** which is based on recursion.
@@ -308,4 +308,4 @@ be used as indices in the bookkeeping array.
 
 ___
 
-[^1] According to [47], merge sort was invented by J. von Neumann in 1945
+[^1]: According to [47], merge sort was invented by J. von Neumann in 1945

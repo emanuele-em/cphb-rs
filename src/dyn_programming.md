@@ -1,4 +1,4 @@
-#  Dynamic programming
+# Dynamic programming
 
 Bit operations provide an efficient and convenient
 way to implement dynamic programming algorithms
@@ -201,10 +201,10 @@ For example, in the above scenario
 \\hspace{10px} \\texttt{last}(\\{1,3,4\\})=5
 \\]
 
-because the optimal rides are $\{1,4\}$ and $\{3\}$,
+because the optimal rides are $\\{1,4\\}$ and $\\{3\\}$,
 and the second ride has weight 5.
 Of course, our final goal is to calculate the value
-of $\texttt{rides}(\{0 \ldots n-1\})$.
+of $\texttt{rides}(\\{0 \ldots n-1\\})$.
 
 We can calculate the values
 of the functions recursively and then apply
@@ -275,7 +275,7 @@ correct order.
 ## Counting subsets
 
 Our last problem in this chapter is as follows:
-Let $X=\{0 \ldots n-1\}$, and each subset $S \subset X$
+Let $X=\\{0 \ldots n-1\\}$, and each subset $S \subset X$
 is assigned an integer \\(\\texttt{value}[S]\\).
 Our task is to calculate for each $S$
 \\[
@@ -342,7 +342,7 @@ Then, in the general case we can use the following recurrence:
 \\[
 \\begin{equation*}
     \\texttt{partial}(S,k) = \\begin{cases}
-               \\texttt{partial}(S,k-1) & k \\notin S \\
+               \\texttt{partial}(S,k-1) & k \\notin S \\\\
                \\texttt{partial}(S,k-1) + \\texttt{partial}(S \\setminus \\{k\\},k-1) & k \\in S
            \\end{cases}
 \\end{equation*}
@@ -399,4 +399,4 @@ _sum_, which yields a very efficient implementation.
 
 ___
 
-[^1] This technique was introduced in 1962 by M. Held and R. M. Karp [34].
+[^1]: This technique was introduced in 1962 by M. Held and R. M. Karp [34].

@@ -56,19 +56,19 @@
         - [Segment tree](segment_tree.md)
         - [Additional techniques](additional_techniques.md)
     - [Bit manipulation](bit_manipulation.md)
-        - [ Bit representation](bit_representation.md)
-        - [ Bit operations](bit_operations.md)
-        - [ Representing sets](representing_sets.md)
-        - [ Bit optimizations](bit_optimizations.md)
-        - [ Dynamic programming](dyn_programming.md)
+        - [Bit representation](bit_representation.md)
+        - [Bit operations](bit_operations.md)
+        - [Representing sets](representing_sets.md)
+        - [Bit optimizations](bit_optimizations.md)
+        - [Dynamic programming](dyn_programming.md)
 - [Graph algorithms](graph_algorithm.md)
     - [Basics of graphs](basic_of_graph.md)
-        - [ Graph terminology](graph_terminology.md)
-        - [ Graph representation](graph_representation.md)
+        - [Graph terminology](graph_terminology.md)
+        - [Graph representation](graph_representation.md)
     - [Graph traversal](graph_traversal.md)
-        - [ Depth-first search](depth_first_search.md)
-        - [ Breadth-first search](breadth_first_search.md)
-        - [ Applications](applications.md)
+        - [Depth-first search](depth_first_search.md)
+        - [Breadth-first search](breadth_first_search.md)
+        - [Applications](applications.md)
     - [Shortest paths](shortest_path.md)
         - [Bellman–Ford algorithm](bellman_ford_algorithm.md)
         - [Dijkstra’s algorithm](dijkstra_s_algorithm.md)
@@ -111,46 +111,46 @@
         - [Modular arithmetic](modular_arithmetic.md)
         - [Solving equations](solving_equations.md)
         - [Other results](other_results.md)
-<!--     - [Combinatorics](README.md) -->
-<!--         - [Binomial coefficients](README.md) -->
-<!--         - [Catalan numbers](README.md) -->
-<!--         - [Inclusion-exclusion](README.md) -->
-<!--         - [Burnside’s lemma](README.md) -->
-<!--         - [Cayley’s formula](README.md) -->
-<!--     - [Matrices](README.md) -->
-<!--         - [Operations](README.md) -->
-<!--         - [Linear recurrences](README.md) -->
-<!--         - [Graphs and matrices](README.md) -->
-<!--     - [Probability](README.md) -->
-<!--         - [Calculation](README.md) -->
-<!--         - [Events](README.md) -->
-<!--         - [Random variables](README.md) -->
-<!--         - [Markov chains](README.md) -->
-<!--         - [Randomized algorithms](README.md) -->
-<!--     - [Game theory](README.md) -->
-<!--         - [Game states](README.md) -->
-<!--         - [Nim game](README.md) -->
-<!--         - [Sprague–Grundy theorem](README.md) -->
-<!--     - [String algorithms](README.md) -->
-<!--         - [String terminology](README.md) -->
-<!--         - [Trie structure](README.md) -->
-<!--         - [String hashing](README.md) -->
-<!--         - [Z-algorithm](README.md) -->
-<!--     - [Square root algorithms](README.md) -->
-<!--         - [Combining algorithms](README.md) -->
-<!--         - [Integer partitions](README.md) -->
-<!--         - [Mo’s algorithm](README.md) -->
-<!--     - [Segment trees revisited](README.md) -->
-<!--         - [Lazy propagation](README.md) -->
-<!--         - [Dynamic trees](README.md) -->
-<!--         - [Data structures](README.md) -->
-<!--         - [Two-dimensionality](README.md) -->
-<!--     - [Geometry](README.md) -->
-<!--         - [Complex numbers](README.md) -->
-<!--         - [Points and lines](README.md) -->
-<!--         - [Polygon area](README.md) -->
-<!--         - [Distance functions](README.md) -->
-<!--     - [Sweep line algorithms](README.md) -->
-<!--         - [Intersection points](README.md) -->
-<!--         - [Closest pair problem](README.md) -->
-<!--         - [Convex hull problem](README.md) -->
+    - [Combinatorics](combinatorics.md)
+        - [Binomial coefficients](binomial_coefficients.md)
+        - [Catalan numbers](catalan_numbers.md)
+        - [Inclusion-exclusion](inclusion_exclusion.md)
+        - [Burnside’s lemma](burnsides_lemma.md)
+        - [Cayley’s formula](cayleys_formula.md)
+    - [Matrices](matrices.md)
+        - [Operations](matrix_operations.md)
+        - [Linear recurrences](linear_recurrences.md)
+        - [Graphs and matrices](graphs_and_matrices.md)
+    - [Probability](probability.md)
+        - [Calculation](probability_calculation.md)
+        - [Events](events.md)
+        - [Random variables](random_variables.md)
+        - [Markov chains](markov_chains.md)
+        - [Randomized algorithms](randomized_algorithms.md)
+    - [Game theory](game_theory.md)
+        - [Game states](game_states.md)
+        - [Nim game](nim_game.md)
+        - [Sprague–Grundy theorem](sprague_grundy_theorem.md)
+    - [String algorithms](string_algorithms.md)
+        - [String terminology](string_terminology.md)
+        - [Trie structure](trie_structure.md)
+        - [String hashing](string_hashing.md)
+        - [Z-algorithm](z_algorithm.md)
+    - [Square root algorithms](square_root_algorithms.md)
+        - [Combining algorithms](combining_algorithms.md)
+        - [Integer partitions](integer_partitions.md)
+        - [Mo’s algorithm](mos_algorithm.md)
+    - [Segment trees revisited](segment_trees_revisited.md)
+        - [Lazy propagation](lazy_propagation.md)
+        - [Dynamic trees](dynamic_trees.md)
+        - [Data structures](segment_tree_data_structures.md)
+        - [Two-dimensionality](two_dimensionality.md)
+    - [Geometry](geometry.md)
+        - [Complex numbers](complex_numbers.md)
+        - [Points and lines](points_and_lines.md)
+        - [Polygon area](polygon_area.md)
+        - [Distance functions](distance_functions.md)
+    - [Sweep line algorithms](sweep_line_algorithms.md)
+        - [Intersection points](intersection_points.md)
+        - [Closest pair problem](closest_pair_problem.md)
+        - [Convex hull problem](convex_hull_problem.md)

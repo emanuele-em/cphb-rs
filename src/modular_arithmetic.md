@@ -48,7 +48,7 @@ The following function calculates the value of
 $x^n \bmod m$:
 
 ```rust
-#println!("{:?}", modpow(5, 4, 2));
+# println!("{:?}", modpow(5, 4, 2));
 fn modpow(x: usize, n:usize, m:usize) -> usize{
     if n == 0 {return 1%m}
     let mut u = modpow(x, n/2, m);
@@ -137,10 +137,14 @@ This behavior is different from modulo wrapping.
 For example, in Rust, if you have a `u32` variable with a value of $123456789$, and you multiply it by itself,
 the result will overflow because it exceeds the maximum value that can be represented by a `u32`. The calculation would be:
 
-```rust
+```rust, compile_fail
 let x = 123456789_u32;
 println!("{}", x*x); // overflow
 ```
+
+Here the compiler can prove the overflow and rejects the program outright.
+When the operands are only known at run time, a debug build panics instead,
+while a release build wraps silently.
 Rust provides several ways to handle integer overflow.
 One common approach is to use the `wrapping_*` methods, 
 which perform arithmetic operations while wrapping around on overflow. 
