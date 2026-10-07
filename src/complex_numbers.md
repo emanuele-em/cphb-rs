@@ -29,10 +29,9 @@ a small point type instead and implement the operators we need. Keeping
 the coordinates integral avoids rounding entirely, which is worth doing
 whenever the problem allows it.
 
-In the following code, `C` is the type of
+In the following code, `i64` is the type of
 a coordinate and `P` is the type of a point or a vector.
-In addition, the code defines macros `X` and `Y`
-that can be used to refer to x and y coordinates.
+The fields `x` and `y` hold its coordinates.
 
 ```rust
 use std::ops::{Add, Sub, Mul};
@@ -80,7 +79,7 @@ println!("{} {}", s.x, s.y); // 5 3
 
 In practice,
 an appropriate coordinate type is usually
-`long long` (integer) or `long double`
+`i64` (integer) or `f64`
 (real number).
 It is a good idea to use integer whenever possible,
 because calculations with integers are exact.
@@ -94,7 +93,7 @@ where $\epsilon$ is a small number (for example, $\epsilon=10^{-9}$).
 ## Functions
 
 In the following examples, the coordinate type is
-`long double`.
+`f64`.
 
 The function $\texttt{abs}(v)$ calculates the length
 $|v|$ of a vector $v=(x,y)$

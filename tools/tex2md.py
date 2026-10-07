@@ -258,7 +258,6 @@ def convert_prose(text, cites, footnotes):
         return "[" + ", ".join(nums) + "]" if nums else ""
     text = replace_cmd(text, "cite", cite)
 
-    text = convert_tabular(text)
     text = re.sub(r"(?m)^\\noindent\s*$\n?", "", text)
 
     for env in ("center", "multicols", "itemize", "enumerate",
@@ -272,6 +271,11 @@ def convert_prose(text, cites, footnotes):
 
     text = text.replace("---", "\u2014").replace("--", "\u2013")
     text = text.replace("~", " ")
+
+    # Generate Markdown table rules after converting prose dashes, so
+    # their ASCII hyphens cannot turn into typographic dashes.
+    text = convert_tabular(text)
+    text = re.sub(r"(?m)^[ \t]*\\\\[ \t]*$", "", text)
 
     # Extract footnotes LAST, so their bodies have already been through every
     # transform above while still part of the text. Pulling them out earlier

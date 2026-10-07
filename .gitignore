@@ -5,3 +5,5 @@ book
 # macOS AppleDouble sidecars, created when the repo lives on a
 # non-APFS/HFS+ volume (e.g. an exFAT external drive).
 ._*
+__pycache__/
+*.pyc

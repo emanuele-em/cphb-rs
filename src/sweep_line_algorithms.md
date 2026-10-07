@@ -23,7 +23,7 @@ and keep track of the number of people in the office.
 For example, the table
 
 | person | arrival time | leaving time |
-| :—: | :—: | :—: |
+| :---: | :---: | :---: |
 | John | 10 | 15 |
 | Maria | 6 | 12 |
 | Peter | 14 | 16 |

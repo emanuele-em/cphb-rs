@@ -68,7 +68,7 @@ add each point to the hull.
 Always after adding a point to the hull,
 we make sure that the last line segment
 in the hull does not turn left.
-As long as it turns left, we repeatedly remove the
+As long as it turns left or continues straight, we repeatedly remove the
 second last point from the hull.
 
 Reusing `P` and `cross` from Chapter 29.2, the whole algorithm is:
@@ -85,12 +85,12 @@ fn hull(points: &[P]) -> Vec<P> {
     p.dedup();
     if p.len() < 3 { return p; }
 
-    let mut build = |pts: &mut dyn Iterator<Item = P>| -> Vec<P> {
+    let build = |pts: &mut dyn Iterator<Item = P>| -> Vec<P> {
         let mut h: Vec<P> = Vec::new();
         for q in pts {
             while h.len() >= 2 {
                 let (a, b) = (h[h.len() - 2], h[h.len() - 1]);
-                if cross(b - a, q - a) > 0 { break; }   // turns right: keep
+                if cross(b - a, q - a) < 0 { break; }   // turns right: keep
                 h.pop();
             }
             h.push(q);
@@ -110,7 +110,12 @@ fn hull(points: &[P]) -> Vec<P> {
 # let pts: Vec<P> = [(0,0),(4,-1),(7,1),(6,3),(2,4),(0,2),
 #                    (1,1),(2,2),(3,2),(4,0),(4,3),(5,2),(6,1)]
 #     .iter().map(|&(x,y)| P{x,y}).collect();
-# println!("{:?}", hull(&pts));
+# let expected: Vec<P> = [(0,0),(0,2),(2,4),(6,3),(7,1),(4,-1)]
+#     .iter().map(|&(x,y)| P{x,y}).collect();
+# assert_eq!(hull(&pts), expected);
+# assert_eq!(hull(&[]), vec![]);
+# let line = [P{x:0,y:0}, P{x:1,y:1}, P{x:2,y:2}, P{x:1,y:1}];
+# assert_eq!(hull(&line), vec![line[0], line[2]]);
 ```
 
 The sort relies on `Ord` being derived: for a struct it compares fields in
@@ -120,7 +125,6 @@ with floats the points would need `sort_by` and a tolerance.
 
 The following pictures show how
 Andrew's algorithm works:
-\\
 
 <script type="text/tikz">
 \begin{tikzpicture}[scale=0.3]
@@ -218,7 +222,6 @@ _3_
 
 _4_
 
-\\
 
 <script type="text/tikz">
 \begin{tikzpicture}[scale=0.3]
@@ -316,7 +319,6 @@ _7_
 
 _8_
 
-\\
 
 <script type="text/tikz">
 \begin{tikzpicture}[scale=0.3]
@@ -414,7 +416,6 @@ _11_
 
 _12_
 
-\\
 
 <script type="text/tikz">
 \begin{tikzpicture}[scale=0.3]
@@ -512,7 +513,6 @@ _15_
 
 _16_
 
-\\
 
 <script type="text/tikz">
 \begin{tikzpicture}[scale=0.3]

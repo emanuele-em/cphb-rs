@@ -42,21 +42,22 @@ The following picture illustrates the above cases:
 For example, in the first case
 $a=(4,2)$ and $b=(1,2)$.
 The following code calculates the cross product
-using the class `complex`:
+using the point type `P` from the previous section:
 
-<!-- TODO-RUST: rewrite this listing in idiomatic Rust -->
-```cpp
-P a = {4,2};
-P b = {1,2};
-C p = (conj(a)*b).Y; // 6
+```rust
+# #[derive(Clone, Copy)] struct P { x: i64, y: i64 }
+fn cross(a: P, b: P) -> i64 {
+    a.x * b.y - a.y * b.x
+}
+
+let a = P { x: 4, y: 2 };
+let b = P { x: 1, y: 2 };
+assert_eq!(cross(a, b), 6);
 ```
 
-The above code works, because
-the function `conj` negates the y coordinate
-of a vector,
-and when the vectors $(x_1,-y_1)$ and $(x_2,y_2)$
-are multiplied together, the y coordinate
-of the result is $x_1 y_2 - x_2 y_1$.
+This uses the formula directly. Equivalently, conjugating $a$
+negates its y coordinate, and the imaginary part of the complex
+product of $(x_1,-y_1)$ and $(x_2,y_2)$ is $x_1 y_2 - x_2 y_1$.
 
 ## Point location
 
@@ -214,10 +215,10 @@ The area of the triangle whose vertices are
 $s_1$, $s_2$ and $p$ can be calculated in two ways:
 it is both
 $\frac{1}{2} |s_2-s_1| d$ and
-$\frac{1}{2} ((s_1-p) \times (s_2-p))$.
+$\frac{1}{2} |(s_1-p) \times (s_2-p)|$.
 Thus, the shortest distance is
 \\[
-d = \\frac{(s_1-p) \\times (s_2-p)}{|s_2-s_1|} .
+d = \\frac{|(s_1-p) \\times (s_2-p)|}{|s_2-s_1|} .
 \\]
 
 ## Point inside a polygon
