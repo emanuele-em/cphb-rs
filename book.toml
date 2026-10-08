@@ -10,3 +10,12 @@ mathjax-support = true
 
 [preprocessor.graphviz]
 command = "mdbook-graphviz"
+
+[preprocessor.gettext]
+after = ["links"]
+
+[build]
+extra-watch-dirs = ["po"]
+
+[output.xgettext]
+pot-file = "po/messages.pot"
