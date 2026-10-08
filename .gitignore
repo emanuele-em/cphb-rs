@@ -2,6 +2,10 @@ book
 .DS_Store
 .tools/
 
+# Generated gettext templates.
+messages.pot
+po/messages.pot
+
 # macOS AppleDouble sidecars, created when the repo lives on a
 # non-APFS/HFS+ volume (e.g. an exFAT external drive).
 ._*

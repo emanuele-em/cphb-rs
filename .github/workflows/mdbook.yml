@@ -33,6 +33,7 @@ jobs:
     env:
       MDBOOK_VERSION: 0.5.2
       MDBOOK_GRAPHVIZ_VERSION: 0.3.1
+      MDBOOK_I18N_HELPERS_VERSION: 0.4.0
     steps:
       - uses: actions/checkout@v4
       - name: Install mdBook and Graphviz
@@ -41,6 +42,7 @@ jobs:
           sudo apt-get install --yes graphviz
           cargo install --locked --version "${MDBOOK_VERSION}" mdbook
           cargo install --locked --version "${MDBOOK_GRAPHVIZ_VERSION}" mdbook-graphviz
+          cargo install --locked --version "${MDBOOK_I18N_HELPERS_VERSION}" mdbook-i18n-helpers
       - name: Lint sources
         run: python3 tools/lint.py src
       - name: Test Rust code blocks
