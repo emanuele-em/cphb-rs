@@ -79,4 +79,19 @@ Graphviz converts fenced `dot process` blocks into SVG during the build.
 TikZ diagrams are handled separately by TikZJax in the browser.
 
 ## License
-The license of the book is Creative Commons BY-NC-SA 4.0.
+
+This book is an adaptation of
+[_Competitive Programmer's Handbook_](https://cses.fi/book/) by Antti Laaksonen,
+used under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+The text has been adapted to Rust and all code has been rewritten. It is not
+an official edition and is not endorsed by the original author.
+
+This adaptation, including its code examples, is released under the same
+license, Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+International. See [LICENSE](LICENSE) for the full text. By contributing, you
+agree that your contributions are licensed under the same terms.
+
+The book is free and non-commercial: do not add advertising, paywalls or
+other commercial use. Content must come only from the CC-licensed handbook,
+not from _Guide to Competitive Programming_ (Springer), which is a separate,
+all-rights-reserved work.
