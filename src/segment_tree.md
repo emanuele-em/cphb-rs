@@ -421,8 +421,8 @@ in the tree at each step.
 
 ___
 
-[^1]: The bottom-up-implementation in this chapter corresponds to that in [62]. Similar structures were used in late 1970's to solve geometric problems [9].
+[^1]: The bottom-up-implementation in this chapter corresponds to that in P. Stańczyk's _Algorytmika praktyczna w konkursach Informatycznych_ (2006). Similar structures were used in late 1970's to solve geometric problems (J. Bentley and D. Wood, 1980).
 
-[^2]: In fact, using _two_ binary indexed trees it is possible to support minimum queries [16], but this is more complicated than to use a segment tree.
+[^2]: In fact, using _two_ binary indexed trees it is possible to support minimum queries (M. Dima and R. Ceterchi, _Efficient range minimum queries using binary indexed trees_, 2015), but this is more complicated than to use a segment tree.
 
 

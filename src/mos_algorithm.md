@@ -159,6 +159,6 @@ of the algorithm is $O(n \sqrt n)$.
 
 ___
 
-[^1]: According to [13], this algorithm
+[^1]: According to [this Codeforces blog post](https://codeforces.com/blog/entry/20032), this algorithm
 is named after Mo Tao, a Chinese competitive programmer, but
-the technique has appeared earlier in the literature [48].
+the technique has appeared earlier in the literature (C. Kent, G. M. Landau and M. Ziv-Ukelson, _On the complexity of sparse exon assembly_, 2006).

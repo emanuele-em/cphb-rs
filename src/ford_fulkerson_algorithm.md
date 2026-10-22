@@ -1,6 +1,6 @@
 # Ford–Fulkerson algorithm
 
-The **Ford–Fulkerson algorithm** [25] finds
+The **Ford–Fulkerson algorithm**, published by L. R. Ford and D. R. Fulkerson in 1956, finds
 the maximum flow in a graph.
 The algorithm begins with an empty flow,
 and at each step finds a path from the source
@@ -267,7 +267,7 @@ and the algorithm is slow.
 Fortunately, we can avoid this situation
 by using one of the following techniques:
 
-The **Edmonds–Karp algorithm** [18]
+The **Edmonds–Karp algorithm** (J. Edmonds and R. M. Karp, 1972)
 chooses each path so that the number of edges
 on the path is as small as possible.
 This can be done by using breadth-first search
@@ -276,7 +276,7 @@ It can be proven that this guarantees that
 the flow increases quickly, and the time complexity
 of the algorithm is $O(m^2 n)$.
 
-The **scaling algorithm** [2] uses depth-first
+The **scaling algorithm** (R. K. Ahuja and J. B. Orlin, 1991) uses depth-first
 search to find paths where each edge weight is
 at least a threshold value.
 Initially, the threshold value is

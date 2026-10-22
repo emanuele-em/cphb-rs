@@ -258,4 +258,4 @@ will be $O(m \log n)$ after sorting the edge list.
 
 ___
 
-[^1]: The algorithm was published in 1956 by J. B. Kruskal [48].
+[^1]: The algorithm was published in 1956 by J. B. Kruskal (_On the shortest spanning subtree of a graph and the traveling salesman problem_).

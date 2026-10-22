@@ -50,7 +50,7 @@ the convex hull is as follows:
 \end{tikzpicture}
 </script>
 
-**Andrew's algorithm** [3] provides
+**Andrew's algorithm**, published by A. M. Andrew in 1979, provides
 an easy way to
 construct the convex hull for a set of points
 in $O(n \log n)$ time.

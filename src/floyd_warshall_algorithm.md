@@ -203,4 +203,4 @@ However, the algorithm can only be used when the graph
 is so small that a cubic time complexity is fast enough.
 ___
 
-[^1]: The algorithm is named after R. W. Floyd and S. Warshall who published it independently in 1962 [23, 70].
+[^1]: The algorithm is named after R. W. Floyd and S. Warshall who published it independently in 1962 (_Algorithm 97: Shortest path_; _A theorem on boolean matrices_).

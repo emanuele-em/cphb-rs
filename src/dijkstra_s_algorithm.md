@@ -277,4 +277,4 @@ at most one distance to the priority queue.
 
 ___
 
-[^1]: E. W. Dijkstra published the algorithm in 1959 [14]; however, his original paper does not mention how to implement the algorithm efficiently.
+[^1]: E. W. Dijkstra published the algorithm in 1959 (_A note on two problems in connexion with graphs_); however, his original paper does not mention how to implement the algorithm efficiently.

@@ -221,5 +221,5 @@ The following codewords can be read from the tree:
 
 ___
 
-[^1]: D. A. Huffman discovered this method when solving a university course assignment and published the algorithm in 1952 [40].
+[^1]: D. A. Huffman discovered this method when solving a university course assignment and published the algorithm in 1952 (_A method for the construction of minimum-redundancy codes_).
 

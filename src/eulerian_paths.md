@@ -380,4 +380,4 @@ so we have successfully constructed an Eulerian circuit.
 ___
 
 [^1]: L. Euler studied such paths in 1736 when he solved the famous Königsberg bridge problem.  This was the birth of graph theory.
-[^2]: The algorithm was published in 1873 after Hierholzer's death [35].
+[^2]: The algorithm was published in 1873 after Hierholzer's death (C. Hierholzer and C. Wiener, _Über die Möglichkeit, einen Linienzug ohne Wiederholung und ohne Unterbrechung zu umfahren_).

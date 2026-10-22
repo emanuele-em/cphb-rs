@@ -256,10 +256,10 @@ which is convenient, because operations with 32 and 64
 bit integers are calculated modulo $2^{32}$ and $2^{64}$.
 However, this is _not_ a good choice, because it is possible
 to construct inputs that always generate collisions when
-constants of the form $2^x$ are used [57].
+constants of the form $2^x$ are used (J. Pachocki and J. Radoszewski, _Where to use and how not to use polynomial string hashing_, 2013).
 
 ___
 
 [^1]: The technique
 was popularized by the Karp–Rabin pattern matching
-algorithm [46].
+algorithm (R. M. Karp and M. O. Rabin, 1987).

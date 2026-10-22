@@ -241,9 +241,9 @@ ___
 [^1]: In 1961,
 C. A. R. Hoare published two algorithms that
 are efficient on average:  
-**quicksort** [40] for sorting arrays and
-**quickselect** [41] for finding order statistics.
+**quicksort** for sorting arrays and
+**quickselect** for finding order statistics.
 
 [^2]: R. M. Freivalds published
-this algorithm in 1977 [29], and it is sometimes
+this algorithm in 1977 (_Probabilistic machines can use less running time_), and it is sometimes
 called  **Freivalds' algorithm**.

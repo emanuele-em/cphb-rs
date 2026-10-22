@@ -69,4 +69,4 @@ the sum $x$ can be created from $S_A$ and $S_B$.
 
 ___
 
-[^1]: This idea was introduced in 1974 by E. Horowitz and S. Sahni [39]
+[^1]: This idea was introduced in 1974 by E. Horowitz and S. Sahni (_Computing partitions with applications to the knapsack problem_)

@@ -146,4 +146,4 @@ while a != b {
 
 ___
 
-[^1]: The idea of the algorithm is mentioned in [46] and attributed to R. W. Floyd; however, it is not known if Floyd actually discovered the algorithm.
+[^1]: The idea of the algorithm is mentioned in D. E. Knuth's _The Art of Computer Programming, Volume 2_ and attributed to R. W. Floyd; however, it is not known if Floyd actually discovered the algorithm.

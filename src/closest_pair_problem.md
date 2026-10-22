@@ -122,6 +122,6 @@ ___
 
 [^1]: Besides this approach,
 there is also an
-$O(n \log n)$ time divide-and-conquer algorithm [64]
+$O(n \log n)$ time divide-and-conquer algorithm (M. I. Shamos and D. Hoey, _Closest-point problems_, 1975)
 that divides the points into two sets and recursively
 solves the problem for both sets.

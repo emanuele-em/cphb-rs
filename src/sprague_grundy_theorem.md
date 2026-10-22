@@ -476,4 +476,4 @@ $1+7$, because $f(1) \oplus f(7) = 0$.
 ___
 
 [^1]: The theorem was
-independently discovered by R. Sprague [69] and P. M. Grundy [34].
+independently discovered by R. Sprague in 1935 and P. M. Grundy in 1939.

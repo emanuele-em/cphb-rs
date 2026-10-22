@@ -368,4 +368,4 @@ we conclude that $min_q(1,6)=1$.
 
 ___
 
-[^1]: This technique was introduced in [7] and sometimes called the **sparse table** method.  There are also more sophisticated techniques [22] where the preprocessing time is only $O(n)$, but such algorithms are not needed in competitive programming.
+[^1]: This technique was introduced by M. A. Bender and M. Farach-Colton in _The LCA problem revisited_ (2000) and sometimes called the **sparse table** method.  There are also more sophisticated techniques (J. Fischer and V. Heun, 2006) where the preprocessing time is only $O(n)$, but such algorithms are not needed in competitive programming.

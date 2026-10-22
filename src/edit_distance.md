@@ -181,4 +181,4 @@ the edit distance between **LOV** and **MOV**, etc.
 
 ___
 
-[^1]: The distance is named after V. I. Levenshtein who studied it in connection with binary codes [49].
+[^1]: The distance is named after V. I. Levenshtein who studied it in connection with binary codes (_Binary codes capable of correcting deletions, insertions, and reversals_, 1966).

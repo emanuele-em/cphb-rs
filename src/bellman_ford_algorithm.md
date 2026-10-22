@@ -263,7 +263,7 @@ regardless of the starting node.
 
 ## SPFA Algorithm
 
-The **SPFA algorithm** (_Shortest Path Faster Algorithm_) [20]
+The **SPFA algorithm** (_Shortest Path Faster Algorithm_), published by D. Fanding in 1994,
 is a variant of the Bellman–Ford algorithm,
 that is often more efficient than the original algorithm.
 The SPFA algorithm does not go through all the edges on each round,
@@ -289,4 +289,4 @@ original Bellman–Ford algorithm.
 
 ___
 
-[^1]: The algorithm is named after R. E. Bellman and L. R. Ford who published it independently in 1958 and 1956, respectively [5, 24]
+[^1]: The algorithm is named after R. E. Bellman and L. R. Ford who published it independently in 1958 and 1956, respectively (R. Bellman, _On a routing problem_; L. R. Ford, _Network flow theory_)

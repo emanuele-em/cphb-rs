@@ -6,7 +6,7 @@ such that each pair is connected with an edge and
 each node belongs to at most one pair.
 
 There are polynomial algorithms for finding
-maximum matchings in general graphs [17],
+maximum matchings in general graphs (J. Edmonds, _Paths, trees, and flowers_, 1965),
 but such algorithms are complex and
 rarely seen in programming contests.
 However, in bipartite graphs,

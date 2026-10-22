@@ -104,4 +104,4 @@ how to store the intermediate results accurately.
 
 ___
 
-[^1]: Surprisingly, this formula was discovered in 1961 by two research teams [43, 67] that worked independently.
+[^1]: Surprisingly, this formula was discovered in 1961 by two research teams that worked independently (P. W. Kasteleyn; H. N. V. Temperley and M. E. Fisher).

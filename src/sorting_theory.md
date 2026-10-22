@@ -308,4 +308,4 @@ be used as indices in the bookkeeping array.
 
 ___
 
-[^1]: According to [47], merge sort was invented by J. von Neumann in 1945
+[^1]: According to D. E. Knuth's _The Art of Computer Programming, Volume 3_, merge sort was invented by J. von Neumann in 1945

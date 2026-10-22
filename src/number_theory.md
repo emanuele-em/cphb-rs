@@ -22,7 +22,7 @@ z = \\sqrt[3]{3}.\\\\
 However, it is an open problem in number theory
 if there are any three
 _integers_ $x$, $y$ and $z$
-that would satisfy the equation [6].
+that would satisfy the equation (see M. Beck, E. Pine, W. Tarrat and K. Y. Jensen, _New integer representations as the sum of three cubes_, 2007).
 
 In this chapter, we will focus on basic concepts
 and algorithms in number theory.

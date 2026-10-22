@@ -183,5 +183,5 @@ the smaller set to the larger set.
 
 ___
 
-[^1]: The structure presented here was introduced in 1971 by J. D. Hopcroft and J. D. Ullman [38].
-    Later, in 1975, R. E. Tarjan studied a more sophisticated variant of the structure [64] that is discussed in many algorithm textbooks nowadays.
+[^1]: The structure presented here was introduced in 1971 by J. D. Hopcroft and J. D. Ullman (_A linear list merging algorithm_).
+    Later, in 1975, R. E. Tarjan studied a more sophisticated variant of the structure (_Efficiency of a good but not linear set union algorithm_) that is discussed in many algorithm textbooks nowadays.

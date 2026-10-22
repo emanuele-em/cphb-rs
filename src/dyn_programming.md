@@ -399,4 +399,4 @@ _sum_, which yields a very efficient implementation.
 
 ___
 
-[^1]: This technique was introduced in 1962 by M. Held and R. M. Karp [34].
+[^1]: This technique was introduced in 1962 by M. Held and R. M. Karp (_A dynamic programming approach to sequencing problems_).

@@ -360,4 +360,4 @@ $3+4-2\cdot2=3$.
 
 ___
 
-[^1]: This lowest common ancestor algorithm was presented in [7].  This technique is sometimes called the **Euler tour technique** [66].
+[^1]: This lowest common ancestor algorithm was presented by M. A. Bender and M. Farach-Colton in _The LCA problem revisited_ (2000).  This technique is sometimes called the **Euler tour technique**, after R. E. Tarjan and U. Vishkin (1984).

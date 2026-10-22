@@ -10,14 +10,14 @@ In both contests, the participants are asked to solve three algorithm tasks of v
 The tasks are divided into subtasks, each of which has an assigned score.
 Even if the contestants are divided into teams, they compete as individuals.
 
-The IOI syllabus [41] regulates the topics that may appear in IOI tasks.
+The [IOI syllabus](https://people.ksp.sk/~misof/ioi-syllabus/) regulates the topics that may appear in IOI tasks.
 Almost all the topics in the IOI syllabus are covered by this book.
 
 Participants for the IOI are selected through national contests.
 Before the IOI, many regional contests are organized, such as the Baltic Olympiad in Informatics (BOI), the Central European Olympiad in Informatics (CEOI) and the Asia-Pacific Informatics Olympiad (APIO).
 
-Some countries organize online practice contests for future IOI participants, such as the Croatian Open Competition in Informatics [11] and the USA Computing Olympiad[68].
-In addition, a large collection of problems from Polish contests is available online [60].
+Some countries organize online practice contests for future IOI participants, such as the [Croatian Open Competition in Informatics](https://hsin.hr/coci/) and the [USA Computing Olympiad](https://usaco.org/).
+In addition, a large collection of problems from Polish contests is available online at [SZKOpuł](https://szkopul.edu.pl/).
 
 ## ICPC 
 The International Collegiate Programming Contest (ICPC) is an annual programming contest for university students.
@@ -49,11 +49,11 @@ There are already some books (besides this book) that
 focus on competitive programming and algorithmic problem solving:
 
 - S. S. Skiena and M. A. Revilla: Programming Challenges: The Programming
-Contest Training Manual [59]
+Contest Training Manual (2003)
 - S. Halim and F. Halim: Competitive Programming 3: The New Lower Bound
-of Programming Contests [33]
+of Programming Contests (2013)
 - K. Diks et al.: Looking for a Challenge? The Ultimate Problem Set from the
-University of Warsaw Programming Competitions [15]
+University of Warsaw Programming Competitions (2012)
 
 The first two books are intended for beginners, whereas the last book contains advanced material.
 
@@ -61,9 +61,9 @@ Of course, general algorithm books are also suitable for competitive programmers
 Some popular books are:
 
 - T. H. Cormen, C. E. Leiserson, R. L. Rivest and C. Stein: Introduction to
-Algorithms [13]
-- J. Kleinberg and É. Tardos: Algorithm Design [45]
-- S. S. Skiena: The Algorithm Design Manual [58]
+Algorithms (3rd edition, 2009)
+- J. Kleinberg and É. Tardos: Algorithm Design (2005)
+- S. S. Skiena: The Algorithm Design Manual (2nd edition, 2008)
 
 ___
 

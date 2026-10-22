@@ -136,4 +136,4 @@ so the nim sum is not 0.
 ___
 
 [^1]: The optimal strategy
-for nim was published in 1901 by C. L. Bouton [10].
+for nim was published in 1901 by C. L. Bouton (_Nim, a game with a complete mathematical theory_).

@@ -372,7 +372,7 @@ ___
 
 [^1]: The first such
 algorithm was Strassen's algorithm,
-published in 1969 [71],
+published in 1969,
 whose time complexity is $O(n^{2.80735})$;
-the best current algorithm [30]
+the best current algorithm (F. Le Gall, 2014)
 works in $O(n^{2.37286})$ time.

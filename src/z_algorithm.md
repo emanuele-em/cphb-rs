@@ -730,6 +730,6 @@ shorter and clearer than the original.
 ___
 
 [^1]: The Z-algorithm
-was presented in [35] as the simplest known
+was presented in D. Gusfield's _Algorithms on Strings, Trees and Sequences_ as the simplest known
 method for linear-time pattern matching, and the original idea
-was attributed to [55].
+was attributed to M. G. Main and R. J. Lorentz (1984).

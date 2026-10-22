@@ -197,4 +197,4 @@ for solving the problem is known.
 
 ___
 
-[^1]: The algorithm presented here was introduced in [4].  There is also another well-known linear-time algorithm [19] that is based on backtracking.
+[^1]: The algorithm presented here was introduced by B. Aspvall, M. F. Plass and R. E. Tarjan in 1979 (_A linear-time algorithm for testing the truth of certain quantified boolean formulas_).  There is also another well-known linear-time algorithm, by S. Even, A. Itai and A. Shamir (1975), that is based on backtracking.
