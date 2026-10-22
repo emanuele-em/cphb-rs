@@ -53,6 +53,14 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Build with mdBook
         run: mdbook build
+      - name: Check site layout
+        # Pages serves ./book as the site root. A second [output.*] renderer
+        # makes mdBook nest the HTML under book/html/, which deploys "fine"
+        # but leaves the root returning 404.
+        run: |
+          test -f book/index.html || { echo "::error::book/index.html missing"; ls book; exit 1; }
+          test ! -d book/html || { echo "::error::HTML was built into book/html/"; exit 1; }
+          grep -q "Rust Edition" book/index.html || { echo "::error::book/index.html is not the book"; exit 1; }
       - name: Upload artifact
         if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
@@ -71,3 +79,18 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Check live site
+        # Retry for a few minutes while the Pages CDN picks up the deployment.
+        env:
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          for attempt in $(seq 1 10); do
+            if curl -fsSL "$PAGE_URL" | grep -q "Rust Edition"; then
+              echo "$PAGE_URL is live"
+              exit 0
+            fi
+            echo "Attempt $attempt: $PAGE_URL not serving the book yet"
+            sleep 30
+          done
+          echo "::error::$PAGE_URL did not serve the book after deploy"
+          exit 1
